@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Noto Serif Display", serif;
   font-size: 1rem;
@@ -66,6 +70,29 @@ img {
 }
 .etl-button.outline {
   background-color: transparent;
+}
+.etl-scroll-up {
+  position: fixed;
+  top: unset;
+  left: unset;
+  bottom: 0;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: #131011;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: all 0.3s ease 0s;
+}
+.etl-scroll-up.visible {
+  visibility: visible;
+  opacity: 1;
+  bottom: 20px;
 }
 
 /* HEADER CONFIG */
