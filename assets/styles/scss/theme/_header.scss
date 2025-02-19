@@ -37,9 +37,12 @@
             @include flex(flex-end, center, nowrap);
             column-gap: 20px;
 
+            @include setResponsiveDesign($breakpoint-medium) {
+                column-gap: 40px;
+            }
+
             @include setResponsiveDesign($breakpoint-large) {
                 @include rowReverse;
-                column-gap: 40px;
             }
 
             &.open-menu {
@@ -56,6 +59,18 @@
             &-profile, &-cart, &-menu-icon {
                 @include relative;
                 @include indexLevel3;
+
+                & > a {
+                    @include flex;
+                }
+
+                img {
+                    height: 16px;
+
+                    @include setResponsiveDesign($breakpoint-large) {
+                        width: 30px;
+                    }
+                }
             }
 
             &-profile {

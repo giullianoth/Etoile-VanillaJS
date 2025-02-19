@@ -1,0 +1,82 @@
+@include theme() {
+    &footer {
+        @include containerFluid;
+        background-color: $color-night;
+        color: $color-white-smoke;
+        text-align: center;
+
+        &__container {
+            @include container;
+            @include flex(space-between);
+            padding-bottom: 40px;
+            row-gap: 40px;
+        }
+
+        &__logo {
+            @include flex1;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include flexBasis(unset);
+                text-align: left;
+            }
+
+            img {
+                width: 120px;
+                margin-bottom: 10px;
+
+                @include setResponsiveDesign($breakpoint-medium) {
+                    width: 160px;
+                }
+            }
+
+            &-subtitle {
+                font-family: $font-cinzel-decorative;
+                font-weight: $font-weight-title;
+                font-size: 0.9em;
+            }
+        }
+
+        &__menu {
+            @include flex1;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include flexBasis(unset);
+                text-align: right;
+            }
+
+            &-title {
+                margin-bottom: 20px;
+
+                h2 {
+                    color: $color-old-gold;
+                }
+            }
+
+            &-list {
+                @include flex;
+                @include column;
+                gap: 10px 60px;
+
+                @include setResponsiveDesign($breakpoint-medium) {
+                    @include row;
+                }
+            }
+
+            &-item {
+                a {
+                    font-weight: $font-weight-text-bold;
+                    color: $color-old-gold;
+                }
+            }
+        }
+
+        &__attribution {
+            padding: 20px;
+            font-size: 0.7em;
+
+            a {
+                font-weight: $font-weight-text-bold;
+            }
+        }
+    }
+}
