@@ -26,3 +26,38 @@ a {
 li {
     list-style-type: none;
 }
+
+p {
+    line-height: 1.4;
+}
+
+@include theme() {
+    &button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: $color-battleship-gray;
+        cursor: pointer;
+        border: 1px solid transparent;
+        font-family: $font-cinzel;
+        text-align: center;
+        font-size: 1.1em;
+
+        &.primary {
+            background-color: $color-murrey;
+            border-color: $color-murrey;
+            
+            &.outline {
+                color: $color-murrey;
+            }
+        }
+
+        &.secondary {
+            background-color: $color-old-gold;
+            color: $color-night;
+        }
+
+        &.outline {
+            background-color: transparent;
+        }
+    }
+}

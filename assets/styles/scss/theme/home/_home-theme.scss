@@ -1,0 +1,7 @@
+@mixin homeTheme() {
+    @include theme() {
+        &home- {
+            @content;
+        }
+    }
+}

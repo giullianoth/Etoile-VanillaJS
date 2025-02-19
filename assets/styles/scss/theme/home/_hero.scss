@@ -1,0 +1,83 @@
+/* Hero */
+@include homeTheme() {
+    &hero {
+        @include containerFluid;
+        @include backgroundImage("mobile-hero-image.jpg");
+        height: 800px;
+        color: $color-white-smoke;
+
+        &__container {
+            @include container;
+            height: 100%;
+            text-align: center;
+            @include flex;
+            @include column;
+        }
+
+        &__subtitle {
+            font-family: $font-cinzel-decorative;
+            font-weight: $font-weight-title;
+            margin-bottom: 5px;
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                font-size: 1.2em;
+            }
+        }
+
+        &__title {
+            margin-bottom: 40px;
+
+            h1 {
+                color: $color-old-gold;
+                font-size: 2.2em;
+
+                @include setResponsiveDesign($breakpoint-medium) {
+                    font-size: 3em;
+                }
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    font-size: 4em;
+                }
+            }
+        }
+
+        &__headline {
+            margin-bottom: 40px;
+            font-weight: $font-weight-text-bold;
+            font-size: 1.1em;
+            @include container(480px, 0, 0);
+
+            @include setResponsiveDesign($breakpoint-large) {
+                max-width: 740px;
+                font-size: 1.6em;
+            }
+        }
+
+        &__cta {
+            @include flex;
+            @include column;
+            gap: 20px;
+            align-self: stretch;
+
+            @include setResponsiveDesign($breakpoint-small) {
+                @include row;
+            }
+
+            .etl-button {
+                @include containerFluid;
+
+                @include setResponsiveDesign($breakpoint-small) {
+                    width: auto;
+                }
+
+                @include setResponsiveDesign($breakpoint-medium) {
+                    font-size: 1.4em;
+                }
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    font-size: 1.8em;
+                }
+            }
+        }
+    }
+}
