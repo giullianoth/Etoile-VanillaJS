@@ -1,0 +1,149 @@
+@include theme() {
+    &header {
+        @include fixedFull;
+        @include indexLevel2;
+        background-image: $color-night-gradient;
+        @include transition;
+
+        &.scrolling {
+            background-color: $color-night;
+
+            .etl-header__container {
+                padding-block: 20px;
+            }
+        }
+
+        &__container {
+            @include container($container-width, $container-inline-clearance, 40px);
+            @include flex(space-between, center, nowrap);
+            @include transition;
+        }
+
+        &__logo {
+            h1 {
+                display: none;
+            }
+
+            img {
+                width: 120px;
+
+                @include setResponsiveDesign($breakpoint-medium) {
+                    width: 160px;
+                }
+            }
+        }
+
+        &__navigation {
+            @include flex(flex-end, center, nowrap);
+            gap: 20px;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include rowReverse;
+                gap: 40px;
+            }
+
+            &.open-menu {
+                .etl-header__navigation-overlay {
+                    visibility: visible;
+                    opacity: 1;
+                }
+
+                .etl-header__navigation-menu-wrapper {
+                    right: 0;
+                }
+            }
+
+            &-profile, &-cart, &-menu-icon {
+                @include relative;
+                @include indexLevel3;
+            }
+
+            &-profile {
+                display: none;
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    display: block;
+                }
+            }
+
+            &-menu-icon {
+                cursor: pointer;
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    display: none;
+                }
+            }
+
+            &-overlay {
+                @include fixedFull(0, 0, true);
+                @include indexLevel2;
+                background-color: $color-night-overlay;
+                visibility: hidden;
+                opacity: 0;
+                @include transition;
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    position: static;
+                    visibility: visible !important;
+                    opacity: 1 !important;
+                    background: none;
+                }
+            }
+
+            &-menu-wrapper {
+                max-width: 560px;
+                background-color: $color-murrey;
+                @include absoluteFull(0, unset, true);
+                right: -100%;
+                padding: 110px 20px 20px 20px;
+                @include transition;
+
+                @include setResponsiveDesign($breakpoint-medium) {
+                    padding-inline: 60px;
+                }
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    max-width: none;
+                    background: none;
+                    position: static;
+                    padding: 0;
+                }
+            }
+        }
+
+        &__main-menu {
+            overflow-y: auto;
+            height: 100%;
+            @include flex(center, stretch, nowrap);
+            @include column;
+            gap: 60px 40px;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                height: auto;
+                @include row;
+            }
+
+            &-item {
+                text-align: right;
+
+                a {
+                    font-family: $font-cinzel;
+                    color: $color-white-smoke;
+                    font-size: 2.2em;
+
+                    @include setResponsiveDesign($breakpoint-large) {
+                        font-family: $font-noto-serif-display;
+                        font-weight: $font-weight-text-bold;
+                        font-size: 1.2em;
+                    }
+                }
+
+                &.last-item {
+                    @include setResponsiveDesign($breakpoint-large) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Étoile Bistrò</title>
+
+    <link rel="stylesheet" href="/assets/styles/css/style.min.css">
 </head>
 <body>
     <header class="etl-header">
@@ -16,12 +18,48 @@
                 </a>
             </div>
 
-            nav.etl-header__navigation
+            <nav class="etl-header__navigation j_menu_navigation_context">
+                <div class="etl-header__navigation-profile">
+                    <a href="#">
+                        <img src="/assets/images/user-circle.svg" alt="Perfil">
+                    </a>
+                </div>
+
+                <div class="etl-header__navigation-cart">
+                    <a href="#">
+                        <img src="/assets/images/shopping-cart-simple.svg" alt="Carrinho">
+                    </a>
+                </div>
+
+                <div class="etl-header__navigation-menu-icon">
+                    <img src="/assets/images/hamburger.svg" alt="Open Menu" class="j_menu_icon">
+                </div>
+
+                <div class="etl-header__navigation-overlay">
+                    <div class="etl-header__navigation-menu-wrapper">
+                        <ul class="etl-header__main-menu">
+                            <li class="etl-header__main-menu-item">
+                                <a href="#">Home</a>
+                            </li>
+
+                            <li class="etl-header__main-menu-item">
+                                <a href="#">Pratos</a>
+                            </li>
+
+                            <li class="etl-header__main-menu-item last-item">
+                                <a href="#">Meu perfil</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
     </header>
 
     <main></main>
 
     <footer></footer>
+
+    <script type="module" src="/assets/scripts/script.js"></script>
 </body>
 </html>

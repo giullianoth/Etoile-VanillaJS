@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+/* FONTS BY GOOGLE FONTS (https://fonts.google.com/) */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+// VARIABLES AND MIXINS
+@import "variables";
+@import "mixins";
+
+// THEME CONFIG
+@import "theme/theme";

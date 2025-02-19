@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    @include setBrowserPrefix(box-sizing, border-box);
+}
+
+body {
+    font-family: $font-noto-serif-display;
+    font-size: $font-size-default;
+    font-weight: $font-weight-text-normal;
+    color: $color-night;
+    background-color: $color-white-smoke;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-cinzel-decorative;
+    font-weight: $font-weight-title;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    @include transition;
+}
+
+li {
+    list-style-type: none;
+}
