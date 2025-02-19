@@ -1,0 +1,72 @@
+@include homeTheme() {
+    &contact {
+        @include containerFluid;
+        text-align: center;
+
+        &__container {
+            @include container;
+            @include flex;
+            row-gap: 40px;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                flex-wrap: nowrap;
+            }
+        }
+
+        &__info {
+            @include flex1;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include flexBasis(60%);
+                text-align: left;
+            }
+        }
+
+        &__title {
+            margin-bottom: 40px;
+        }
+
+        &__text {
+            font-size: 1.1em
+        }
+
+        &__links {
+            @include flex1;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include flexBasis(40%);
+            }
+
+            &-list {
+                @include flex(center, center, nowrap);
+                column-gap: 20px;
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    justify-content: flex-end;
+                }
+            }
+
+            &-item {
+                .etl-button {
+                    @include flex;
+                    padding: 0;
+                    width: 40px;
+                    height: 40px;
+
+                    @include setResponsiveDesign($breakpoint-medium) {
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+
+                img {
+                    width: 26px;
+
+                    @include setResponsiveDesign($breakpoint-medium) {
+                        width: 48px;
+                    }
+                }
+            }
+        }
+    }
+}
