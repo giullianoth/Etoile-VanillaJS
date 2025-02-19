@@ -1,0 +1,39 @@
+/* Presentation section */
+@include homeTheme() {
+    &presentation {
+        @include containerFluid;
+        
+        &__container {
+            @include container;
+            @include flex(flex-start, stretch);
+            gap: 20px;
+        }
+
+        &__item {
+            @include flex1;
+            background-color: $color-murrey;
+            text-align: center;
+            color: $color-white-smoke;
+            @include container(480px, 0, 0);
+            padding: 20px;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include flex3(20px);
+            }
+
+            &:nth-child(even) {
+                background-color: $color-claret;
+            }
+
+            &-image {
+                @include containerFluid;
+                @include rounded;
+                margin-bottom: 20px;
+            }
+
+            &-title {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

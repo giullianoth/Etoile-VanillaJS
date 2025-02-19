@@ -1,15 +1,15 @@
-/* Hero */
+/* Hero section */
 @include homeTheme() {
     &hero {
         @include containerFluid;
         @include backgroundImage("mobile-hero-image.jpg");
         height: 800px;
         color: $color-white-smoke;
+        text-align: center;
 
         &__container {
             @include container;
             height: 100%;
-            text-align: center;
             @include flex;
             @include column;
         }
