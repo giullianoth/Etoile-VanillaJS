@@ -7,6 +7,14 @@
         color: $color-white-smoke;
         text-align: center;
 
+        @include setResponsiveDesign($breakpoint-small) {
+            @include backgroundImage("tablet-hero-image.jpg");
+        }
+
+        @include setResponsiveDesign($breakpoint-large) {
+            @include backgroundImage("desktop-hero-image.jpg");
+        }
+
         &__container {
             @include container;
             height: 100%;
