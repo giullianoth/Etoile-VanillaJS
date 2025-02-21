@@ -19,7 +19,7 @@ body {
     @include column;
 }
 
-main {
+body > main {
     flex-grow: 1;
 }
 
@@ -118,7 +118,7 @@ img {
         &__container {
             @include container;
             @include flex(center, flex-end);
-            padding-block: 0 20px;
+            padding-bottom: 20px;
             height: 100%;
         }
 

@@ -27,7 +27,7 @@ body {
   flex-direction: column;
 }
 
-main {
+body > main {
   flex-grow: 1;
 }
 
@@ -187,7 +187,7 @@ img {
   justify-content: center;
   align-items: flex-end;
   flex-wrap: wrap;
-  padding-block: 0 20px;
+  padding-bottom: 20px;
   height: 100%;
 }
 .etl-page-heading__title h1 {
@@ -810,7 +810,7 @@ img {
   padding: 20px;
   text-align: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 576px) {
   .etl-plates-selected {
     text-align: left;
   }
@@ -830,7 +830,7 @@ img {
   flex-direction: column;
   row-gap: 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 576px) {
   .etl-plates-selected__cta {
     flex-direction: row;
   }
@@ -844,7 +844,7 @@ img {
 .etl-plates-selected__cta-button {
   width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 576px) {
   .etl-plates-selected__cta-button {
     width: auto;
   }

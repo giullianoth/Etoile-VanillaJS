@@ -4,7 +4,7 @@
         padding: 20px;
         text-align: center;
 
-        @include setResponsiveDesign($breakpoint-medium) {
+        @include setResponsiveDesign($breakpoint-small) {
             text-align: left;
         }
 
@@ -22,7 +22,7 @@
             @include column;
             row-gap: 20px;
 
-            @include setResponsiveDesign($breakpoint-medium) {
+            @include setResponsiveDesign($breakpoint-small) {
                 @include row;
             }
 
@@ -36,7 +36,7 @@
             &-button {
                 @include containerFluid;
 
-                @include setResponsiveDesign($breakpoint-medium) {
+                @include setResponsiveDesign($breakpoint-small) {
                     width: auto;
                 }
             }
