@@ -208,6 +208,11 @@ img {
   text-align: center;
   margin-bottom: 40px;
 }
+@media screen and (min-width: 992px) {
+  .etl-section-heading {
+    text-align: left;
+  }
+}
 .etl-section-heading h1 {
   font-size: 1.4em;
 }
@@ -219,11 +224,6 @@ img {
 @media screen and (min-width: 992px) {
   .etl-section-heading h1 {
     font-size: 2.2em;
-  }
-}
-@media screen and (min-width: 992px) {
-  .etl-section-heading {
-    text-align: left;
   }
 }
 .etl-modal {
