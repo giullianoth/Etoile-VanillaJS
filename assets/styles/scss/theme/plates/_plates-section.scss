@@ -1,0 +1,63 @@
+@include platesTheme() {
+    &plates {
+        &__section {
+            @include containerFluid;
+        }
+
+        &__container {
+            @include container;
+        }
+
+        &__list {
+            @include flex(flex-start, stretch);
+            gap: 20px;
+        }
+
+        &__plate {
+            @include relative;
+            height: 360px;
+            @include flex1;
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                @include flex2(20px);
+            }
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include flex3(20px);
+            }
+
+            &-image {
+                @include containerFluid(true);
+                object-fit: cover;
+                object-position: center;
+            }
+
+            &-info {
+                @include absoluteFull(unset, 20px);
+                max-width: calc(100% - 40px);
+                bottom: 20px;
+                right: 20px;
+                padding: 20px;
+                background-color: $color-old-gold-overlay;
+                backdrop-filter: blur(8px);
+            }
+
+            &-name {
+                margin-bottom: 10px;
+
+                h2 {
+                    font-family: $font-cinzel;
+                    font-size: 0.9em;
+                    line-height: 1;
+                    color: $color-night;
+                }
+            }
+
+            &-price {
+                font-size: 1.8em;
+                font-family: $font-cinzel-decorative;
+                font-weight: $font-weight-title;
+            }
+        }
+    }
+}

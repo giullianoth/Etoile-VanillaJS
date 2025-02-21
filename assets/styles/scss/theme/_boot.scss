@@ -14,6 +14,13 @@ body {
     font-weight: $font-weight-text-normal;
     color: $color-night;
     background-color: $color-white-smoke;
+    min-height: 100vh;
+    @include flex(flex-start, stretch, nowrap);
+    @include column;
+}
+
+main {
+    flex-grow: 1;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -89,6 +96,64 @@ img {
             visibility: visible;
             opacity: 1;
             bottom: 20px;
+        }
+    }
+
+    &page-heading {
+        @include containerFluid;
+        @include backgroundOverlay("mobile-title-image.jpg");
+        height: 180px;
+        background-color: $color-night;
+
+        @include setResponsiveDesign($breakpoint-small) {
+            @include backgroundOverlay("tablet-title-image.jpg");
+        }
+
+        @include setResponsiveDesign($breakpoint-large) {
+            @include backgroundOverlay("desktop-title-image.jpg");
+        }
+
+        &__container {
+            @include container;
+            @include flex(center, flex-end);
+            padding-block: 0 20px;
+            height: 100%;
+        }
+
+        &__title {
+            h1 {
+                font-size: 1.8em;
+                color: $color-old-gold;
+
+                @include setResponsiveDesign($breakpoint-medium) {
+                    font-size: 2em;
+                }
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    font-size: 2.2em;
+                }
+            }
+        }
+    }
+
+    &section-heading {
+        text-align: center;
+        margin-bottom: 40px;
+
+        h1 {
+            font-size: 1.4em;
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                font-size: 1.8em;
+            }
+
+            @include setResponsiveDesign($breakpoint-large) {
+                font-size: 2.2em;
+            }
+        }
+
+        @include setResponsiveDesign($breakpoint-large) {
+            text-align: left;
         }
     }
 }

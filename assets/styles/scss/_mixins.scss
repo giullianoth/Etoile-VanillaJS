@@ -146,6 +146,25 @@
     background-position: $position;
 }
 
+@mixin backgroundOverlay($image: "", $repeat: no-repeat, $size: cover, $position: center center, $opacity: 0.3, $blendMode: soft-light) {
+    @include relative;
+
+    & > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    &::before {
+        content: "";
+        @include absoluteFull(0, 0, true);
+        z-index: 0;
+        opacity: $opacity;
+        mix-blend-mode: $blendMode;
+
+        @include backgroundImage($image, $repeat, $size, $position);
+    }
+}
+
 // TRANSITIONS AND ANIMATIONS
 @mixin transition($property: all, $duration: $transition-duration-default, $timingFunction: ease, $delay: 0s) {
     transition: $property $duration $timingFunction $delay;

@@ -1,0 +1,7 @@
+@mixin platesTheme() {
+    @include theme() {
+        &plates- {
+            @content;
+        }
+    }
+}

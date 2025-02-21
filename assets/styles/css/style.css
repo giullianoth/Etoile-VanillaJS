@@ -19,6 +19,16 @@ body {
   font-weight: 200;
   color: #131011;
   background-color: #F6F4F5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -93,6 +103,126 @@ img {
   visibility: visible;
   opacity: 1;
   bottom: 20px;
+}
+.etl-page-heading {
+  width: 100%;
+  position: relative;
+  height: 180px;
+  background-color: #131011;
+}
+.etl-page-heading > * {
+  position: relative;
+  z-index: 2;
+}
+.etl-page-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.3;
+  mix-blend-mode: soft-light;
+  background-image: url("../../../assets/images/mobile-title-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+@media screen and (min-width: 576px) {
+  .etl-page-heading {
+    position: relative;
+  }
+  .etl-page-heading > * {
+    position: relative;
+    z-index: 2;
+  }
+  .etl-page-heading::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.3;
+    mix-blend-mode: soft-light;
+    background-image: url("../../../assets/images/tablet-title-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+@media screen and (min-width: 992px) {
+  .etl-page-heading {
+    position: relative;
+  }
+  .etl-page-heading > * {
+    position: relative;
+    z-index: 2;
+  }
+  .etl-page-heading::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.3;
+    mix-blend-mode: soft-light;
+    background-image: url("../../../assets/images/desktop-title-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+.etl-page-heading__container {
+  max-width: 1260px;
+  padding: 80px 20px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  padding-block: 0 20px;
+  height: 100%;
+}
+.etl-page-heading__title h1 {
+  font-size: 1.8em;
+  color: #E2BF4E;
+}
+@media screen and (min-width: 768px) {
+  .etl-page-heading__title h1 {
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 992px) {
+  .etl-page-heading__title h1 {
+    font-size: 2.2em;
+  }
+}
+.etl-section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.etl-section-heading h1 {
+  font-size: 1.4em;
+}
+@media screen and (min-width: 768px) {
+  .etl-section-heading h1 {
+    font-size: 1.8em;
+  }
+}
+@media screen and (min-width: 992px) {
+  .etl-section-heading h1 {
+    font-size: 2.2em;
+  }
+}
+@media screen and (min-width: 992px) {
+  .etl-section-heading {
+    text-align: left;
+  }
 }
 
 /* HEADER CONFIG */
@@ -588,4 +718,68 @@ img {
   .etl-home-contact__links-item img {
     width: 48px;
   }
+}
+
+/* PLATES PAGE CONFIG */
+.etl-plates-plates__section {
+  width: 100%;
+}
+.etl-plates-plates__container {
+  max-width: 1260px;
+  padding: 80px 20px;
+  margin-inline: auto;
+}
+.etl-plates-plates__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.etl-plates-plates__plate {
+  position: relative;
+  height: 360px;
+  flex-basis: 100%;
+}
+@media screen and (min-width: 768px) {
+  .etl-plates-plates__plate {
+    flex-basis: calc(50% - 10px);
+  }
+}
+@media screen and (min-width: 992px) {
+  .etl-plates-plates__plate {
+    flex-basis: calc(33.3333333333% - 13.3333333333px);
+  }
+}
+.etl-plates-plates__plate-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.etl-plates-plates__plate-info {
+  position: absolute;
+  top: unset;
+  left: 20px;
+  width: 100%;
+  max-width: calc(100% - 40px);
+  bottom: 20px;
+  right: 20px;
+  padding: 20px;
+  background-color: rgba(226, 191, 78, 0.5019607843);
+  backdrop-filter: blur(8px);
+}
+.etl-plates-plates__plate-name {
+  margin-bottom: 10px;
+}
+.etl-plates-plates__plate-name h2 {
+  font-family: "Cinzel", serif;
+  font-size: 0.9em;
+  line-height: 1;
+  color: #131011;
+}
+.etl-plates-plates__plate-price {
+  font-size: 1.8em;
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 700;
 }
