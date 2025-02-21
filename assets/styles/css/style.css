@@ -57,13 +57,15 @@ img {
 }
 
 .etl-button {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
   padding: 12px 24px;
   background-color: #8A8A8A;
   cursor: pointer;
   border: 1px solid transparent;
   font-family: "Cinzel", serif;
-  text-align: center;
   font-size: 1.1em;
   color: #F6F4F5;
 }
@@ -223,6 +225,25 @@ img {
   .etl-section-heading {
     text-align: left;
   }
+}
+.etl-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 110;
+  background-color: rgba(19, 16, 17, 0.6);
+}
+.etl-modal__wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 560px;
+  padding: 0 20px;
+  margin-inline: auto;
+  width: 100%;
+  transform: translate(-50%, -50%);
 }
 
 /* HEADER CONFIG */
@@ -782,4 +803,49 @@ img {
   font-size: 1.8em;
   font-family: "Cinzel Decorative", serif;
   font-weight: 700;
+}
+
+.etl-plates-selected {
+  background-color: #F6F4F5;
+  padding: 20px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .etl-plates-selected {
+    text-align: left;
+  }
+}
+.etl-plates-selected__image {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.etl-plates-selected__name, .etl-plates-selected__description {
+  margin-bottom: 20px;
+}
+.etl-plates-selected__cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  row-gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .etl-plates-selected__cta {
+    flex-direction: row;
+  }
+}
+.etl-plates-selected__cta-price {
+  font-size: 1.8em;
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 700;
+  color: #6F0231;
+}
+.etl-plates-selected__cta-button {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .etl-plates-selected__cta-button {
+    width: auto;
+  }
 }

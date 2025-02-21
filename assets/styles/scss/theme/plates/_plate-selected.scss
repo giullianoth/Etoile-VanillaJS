@@ -1,0 +1,45 @@
+@include platesTheme() {
+    &selected {
+        background-color: $color-white-smoke;
+        padding: 20px;
+        text-align: center;
+
+        @include setResponsiveDesign($breakpoint-medium) {
+            text-align: left;
+        }
+
+        &__image {
+            @include containerFluid;
+            margin-bottom: 20px;
+        }
+
+        &__name, &__description {
+            margin-bottom: 20px;
+        }
+
+        &__cta {
+            @include flex(space-between, center, nowrap);
+            @include column;
+            row-gap: 20px;
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                @include row;
+            }
+
+            &-price {
+                font-size: 1.8em;
+                font-family: $font-cinzel-decorative;
+                font-weight: $font-weight-title;
+                color: $color-claret;
+            }
+
+            &-button {
+                @include containerFluid;
+
+                @include setResponsiveDesign($breakpoint-medium) {
+                    width: auto;
+                }
+            }
+        }
+    }
+}

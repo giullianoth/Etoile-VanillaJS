@@ -50,13 +50,15 @@ img {
 
 @include theme() {
     &button {
-        display: inline-block;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 10px;
         padding: 12px 24px;
         background-color: $color-battleship-gray;
         cursor: pointer;
         border: 1px solid transparent;
         font-family: $font-cinzel;
-        text-align: center;
         font-size: 1.1em;
         color: $color-white-smoke;
 
@@ -154,6 +156,19 @@ img {
 
         @include setResponsiveDesign($breakpoint-large) {
             text-align: left;
+        }
+    }
+
+    &modal {
+        @include fixedFull(0, 0, true);
+        @include indexLevel3;
+        background-color: $color-night-overlay;
+
+        &__wrapper {
+            @include absolute(50%, 50%);
+            @include container(560px, 20px, 0);
+            @include containerFluid;
+            transform: translate(-50%, -50%);
         }
     }
 }
