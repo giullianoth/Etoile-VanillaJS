@@ -1,0 +1,44 @@
+@include profileTheme() {
+    &user {
+        @include containerFluid;
+
+        &__container {
+            @include container;
+            @include flex;
+            row-gap: 20px;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                justify-content: space-between;
+                @include rowReverse;
+            }
+        }
+
+        &__photo {
+            @include flexBasis(120px);
+
+            img {
+                width: 120px;
+                height: 120px;
+                object-fit: cover;
+                object-position: center;
+                border: 3px solid $color-claret;
+                @include rounded;
+            }
+        }
+
+        &__info {
+            @include flex1;
+            text-align: center;
+            color: $color-claret;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include flexBasis(unset);
+                text-align: left;
+            }
+        }
+
+        &__name {
+            margin-bottom: 10px;
+        }
+    }
+}

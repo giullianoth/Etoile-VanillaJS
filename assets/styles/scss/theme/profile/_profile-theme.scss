@@ -1,0 +1,7 @@
+@mixin profileTheme() {
+    @include theme() {
+        &profile- {
+            @content;
+        }
+    }
+}

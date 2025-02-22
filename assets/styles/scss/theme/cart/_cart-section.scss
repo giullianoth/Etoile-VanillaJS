@@ -103,7 +103,6 @@
                 }
 
                 @include setResponsiveDesign($breakpoint-large) {
-                    @include flexBasis(unset);
                     justify-content: flex-end;
                 }
             }
@@ -123,7 +122,7 @@
                     @include flex;
 
                     @include setResponsiveDesign($breakpoint-small) {
-                        @include flexBasis(40px);
+                        @include flexBasis(30px);
                     }
                 }
 

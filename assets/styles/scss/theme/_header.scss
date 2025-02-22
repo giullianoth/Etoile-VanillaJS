@@ -13,6 +13,33 @@
             }
         }
 
+        &.authenticated {
+            position: static;
+            background-image: none;
+            background-color: $color-murrey;
+            color: $color-white-smoke;
+
+            .etl-header__container {
+                padding-block: 20px;
+            }
+
+            .etl-header__navigation {
+                @include rowReverse;
+            }
+
+            .etl-header__navigation-profile {
+                display: block;
+            }
+
+            .etl-header__navigation-welcome {
+                display: none;
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    display: block;
+                }
+            }
+        }
+
         &__container {
             @include container($container-width, $container-inline-clearance, 40px);
             @include flex(space-between, center, nowrap);
@@ -56,7 +83,7 @@
                 }
             }
 
-            &-profile, &-cart, &-menu-icon {
+            &-profile, &-cart, &-menu-icon, &-logout {
                 @include relative;
                 @include indexLevel3;
 

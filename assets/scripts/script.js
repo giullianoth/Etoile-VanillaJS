@@ -15,12 +15,12 @@ const setFixedHeader = () => window.scrollY > 0
 setFixedHeader()
 
 // MOBILE MENU
-menuIcon.addEventListener("click", () => {
+menuIcon?.addEventListener("click", () => {
     menuNavigationContext.classList.toggle("open-menu")
     menuIcon.src = menuNavigationContext.classList.contains("open-menu") ? closeIcon : hamburgerIcon
 })
 
-// SROLL UP
+// SCROLL UP
 const showScrollUpButton = () => window.scrollY > 0
 ? scrollUpButton.classList.add("visible")
 : scrollUpButton.classList.remove("visible")
