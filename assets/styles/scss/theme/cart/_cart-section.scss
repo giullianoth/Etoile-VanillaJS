@@ -1,0 +1,159 @@
+@include cartTheme() {
+    &cart {
+        &__section {
+            @include containerFluid;
+        }
+
+        &__container {
+            @include container;
+        }
+
+        &__empty {
+            text-align: center;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                text-align: left;
+            }
+        }
+
+        &__list {
+            @include containerFluid;
+            @include flex(flex-start, stretch, nowrap);
+            @include column;
+            margin-bottom: 40px;
+        }
+
+        &__item {
+            @include flex(flex-start, stretch, nowrap);
+            column-gap: 20px;
+            padding: 10px;
+
+            @include setResponsiveDesign($breakpoint-small) {
+                column-gap: 10px;
+            }
+
+            &:nth-child(odd) {
+                background-color: $color-lavender-blush;
+            }
+
+            &-image {
+                @include flexBasis(70px);
+
+                @include setResponsiveDesign($breakpoint-small) {
+                    @include flexBasis(120px);
+                }
+
+                img {
+                    @include containerFluid;
+                    object-fit: cover;
+                    object-position: center;
+
+                    @include setResponsiveDesign($breakpoint-small) {
+                        height: 100%;
+                    }
+                }
+            }
+
+            &-info {
+                @include flexBasis(calc(100% - 70px - 20px));
+                @include flex(space-between, center);
+                row-gap: 20px;
+
+                @include setResponsiveDesign($breakpoint-small) {
+                    @include flexBasis(calc(100% - 120px - 10px));
+                }
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    flex-wrap: nowrap;
+                }
+            }
+
+            &-text {
+                @include flex1;
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    @include flexBasis(unset);
+                }
+            }
+
+            &-name {
+                margin-bottom: 10px;
+
+                h2 {
+                    font-size: 1.1em;
+
+                    @include setResponsiveDesign($breakpoint-large) {
+                        font-size: 1.4em;
+                    }
+                }
+            }
+
+            &-ingredients {
+                margin-bottom: 20px;
+                font-weight: $font-weight-text-bold;
+            }
+
+            &-actions {
+                @include flex1;
+                @include flex(flex-start);
+                gap: 30px;
+
+                @include setResponsiveDesign($breakpoint-small) {
+                    @include flexBasis(unset);
+                }
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    @include flexBasis(unset);
+                    justify-content: flex-end;
+                }
+            }
+
+            &-quantity {
+                @include flex1;
+                @include flex(center, center, nowrap);
+
+                @include setResponsiveDesign($breakpoint-small) {
+                    @include flexBasis(unset);
+                }
+
+                .button {
+                    padding: 0;
+                    width: 30px;
+                    height: 30px;
+                    @include flex;
+
+                    @include setResponsiveDesign($breakpoint-small) {
+                        @include flexBasis(40px);
+                    }
+                }
+
+                .qt {
+                    @include flexBasis(calc(100% - 60px));
+                    text-align: center;
+                    font-size: 1.1em;
+                    font-weight: $font-weight-text-bold;
+                    width: 60px;
+                }
+            }
+
+            &-button {
+                @include flex1;
+                padding: 6px 18px;
+
+                @include setResponsiveDesign($breakpoint-small) {
+                    @include flexBasis(unset);
+                }
+            }
+        }
+
+        &__action {
+            &-button {
+                @include containerFluid;
+
+                @include setResponsiveDesign($breakpoint-small) {
+                    width: auto;
+                }
+            }
+        }
+    }
+}
