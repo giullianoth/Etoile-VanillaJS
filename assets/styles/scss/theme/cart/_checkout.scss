@@ -1,0 +1,40 @@
+@include cartTheme() {
+    &checkout {
+        background-color: $color-white-smoke;
+        padding: 20px;
+        text-align: center;
+
+        @include setResponsiveDesign($breakpoint-small) {
+            text-align: left;
+        }
+
+        &__title, &__text {
+            margin-bottom: 20px;
+        }
+
+        &__time {
+            @include flex(space-between);
+            row-gap: 20px;
+
+            .time {
+                @include flex1;
+
+                @include setResponsiveDesign($breakpoint-small) {
+                    @include flexBasis(unset);
+                }
+            }
+
+            &-actions {
+                @include flex1;
+                @include flex(center, stretch, nowrap);
+                @include column;
+                gap: 20px;
+
+                @include setResponsiveDesign($breakpoint-small) {
+                    @include flexBasis(unset);
+                    @include row;
+                }
+            }
+        }
+    }
+}

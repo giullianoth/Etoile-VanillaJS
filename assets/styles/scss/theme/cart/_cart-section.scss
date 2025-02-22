@@ -140,6 +140,10 @@
                 @include flex1;
                 padding: 6px 18px;
 
+                @include setResponsiveDesign(350px, true) {
+                    font-size: 0.8em;
+                }
+
                 @include setResponsiveDesign($breakpoint-small) {
                     @include flexBasis(unset);
                 }

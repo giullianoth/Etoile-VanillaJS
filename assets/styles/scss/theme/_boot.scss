@@ -58,6 +58,10 @@ input {
     outline: none;
 }
 
+strong {
+    font-weight: $font-weight-text-bold;
+}
+
 @include theme() {
     &button {
         display: inline-flex;
