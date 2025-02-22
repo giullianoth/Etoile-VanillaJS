@@ -48,6 +48,16 @@ img {
     max-width: 100%;
 }
 
+input {
+    padding: 12px;
+    background: none;
+    border: 1px solid $color-night;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    outline: none;
+}
+
 @include theme() {
     &button {
         display: inline-flex;
@@ -150,11 +160,11 @@ img {
             font-size: 1.4em;
 
             @include setResponsiveDesign($breakpoint-medium) {
-                font-size: 1.8em;
+                font-size: 1.6em;
             }
 
             @include setResponsiveDesign($breakpoint-large) {
-                font-size: 2.2em;
+                font-size: 1.8em;
             }
         }
     }

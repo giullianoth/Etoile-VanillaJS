@@ -56,6 +56,16 @@ img {
   max-width: 100%;
 }
 
+input {
+  padding: 12px;
+  background: none;
+  border: 1px solid #131011;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  outline: none;
+}
+
 .etl-button {
   display: inline-flex;
   justify-content: center;
@@ -218,12 +228,12 @@ img {
 }
 @media screen and (min-width: 768px) {
   .etl-section-heading h1 {
-    font-size: 1.8em;
+    font-size: 1.6em;
   }
 }
 @media screen and (min-width: 992px) {
   .etl-section-heading h1 {
-    font-size: 2.2em;
+    font-size: 1.8em;
   }
 }
 .etl-modal {
@@ -816,8 +826,10 @@ img {
   }
 }
 .etl-plates-selected__image {
-  width: 100%;
   margin-bottom: 20px;
+}
+.etl-plates-selected__image img {
+  width: 100%;
 }
 .etl-plates-selected__name, .etl-plates-selected__description {
   margin-bottom: 20px;
@@ -847,5 +859,50 @@ img {
 @media screen and (min-width: 576px) {
   .etl-plates-selected__cta-button {
     width: auto;
+  }
+}
+
+/* AUTH PAGE CONFIG - LOGIN & REGISTER */
+.etl-auth-login, .etl-auth-register {
+  width: 100%;
+}
+.etl-auth-login__container, .etl-auth-register__container {
+  max-width: 1260px;
+  padding: 80px 20px;
+  margin-inline: auto;
+}
+.etl-auth-login__redirect, .etl-auth-register__redirect {
+  margin-bottom: 40px;
+  text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .etl-auth-login__redirect, .etl-auth-register__redirect {
+    text-align: left;
+  }
+}
+.etl-auth-login__form, .etl-auth-register__form {
+  max-width: 480px;
+  padding: 0 0;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 20px;
+}
+@media screen and (min-width: 992px) {
+  .etl-auth-login__form, .etl-auth-register__form {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .etl-auth-login .etl-button, .etl-auth-register .etl-button {
+    align-self: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  .etl-auth-login .etl-button, .etl-auth-register .etl-button {
+    align-self: flex-start;
   }
 }

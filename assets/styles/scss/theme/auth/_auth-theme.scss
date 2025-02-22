@@ -1,0 +1,7 @@
+@mixin authTheme() {
+    @include theme() {
+        &auth- {
+            @content;
+        }
+    }
+}

@@ -9,8 +9,11 @@
         }
 
         &__image {
-            @include containerFluid;
             margin-bottom: 20px;
+
+            img {
+                @include containerFluid;
+            }
         }
 
         &__name, &__description {

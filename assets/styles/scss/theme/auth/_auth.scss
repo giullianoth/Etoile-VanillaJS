@@ -1,0 +1,39 @@
+@include authTheme() {
+    &login, &register {
+        @include containerFluid;
+
+        &__container {
+            @include container;
+        }
+
+        &__redirect {
+            margin-bottom: 40px;
+            text-align: center;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                text-align: left;
+            }
+        }
+
+        &__form {
+            @include container(480px, 0, 0);
+            @include flex(center, stretch);
+            @include column;
+            row-gap: 20px;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                margin: 0;
+            }
+        }
+
+        .etl-button {
+            @include setResponsiveDesign($breakpoint-medium) {
+                align-self: center;
+            }
+
+            @include setResponsiveDesign($breakpoint-large) {
+                align-self: flex-start;
+            }
+        }
+    }
+}
