@@ -12,6 +12,12 @@
             margin-bottom: 20px;
         }
 
+        &__title {
+            @include setResponsiveDesign($breakpoint-small) {
+                font-size: 1.6em;
+            }
+        }
+
         &__time {
             @include flex(space-between);
             row-gap: 20px;

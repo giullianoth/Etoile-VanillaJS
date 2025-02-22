@@ -180,7 +180,7 @@ strong {
 
         &__wrapper {
             @include absolute(50%, 50%);
-            @include container(560px, 20px, 0);
+            @include container(600px, 20px, 0);
             @include containerFluid;
             transform: translate(-50%, -50%);
         }

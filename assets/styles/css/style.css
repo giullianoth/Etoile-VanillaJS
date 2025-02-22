@@ -253,7 +253,7 @@ strong {
   position: absolute;
   top: 50%;
   left: 50%;
-  max-width: 560px;
+  max-width: 600px;
   padding: 0 20px;
   margin-inline: auto;
   width: 100%;
@@ -1099,6 +1099,11 @@ strong {
 }
 .etl-cart-checkout__title, .etl-cart-checkout__text {
   margin-bottom: 20px;
+}
+@media screen and (min-width: 576px) {
+  .etl-cart-checkout__title {
+    font-size: 1.6em;
+  }
 }
 .etl-cart-checkout__time {
   display: flex;
