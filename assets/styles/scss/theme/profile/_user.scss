@@ -6,6 +6,7 @@
             @include container;
             @include flex;
             row-gap: 20px;
+            padding-top: 140px;
 
             @include setResponsiveDesign($breakpoint-large) {
                 justify-content: space-between;

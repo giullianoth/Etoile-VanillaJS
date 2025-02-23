@@ -1,0 +1,79 @@
+@include profileTheme() {
+    &orders {
+        @include containerFluid;
+
+        &__container {
+            @include container;
+            padding-top: 0;
+        }
+
+        &__empty {
+            text-align: center;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                text-align: left;
+            }
+        }
+
+        &__list {
+            @include flex(flex-start, stretch);
+            gap: 20px;
+        }
+
+        &__order {
+            @include flex1;
+            background-color: $color-murrey;
+            color: $color-white-smoke;
+            padding: 20px;
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                @include flex2(20px);
+            }
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include flex3(20px);
+            }
+            
+            &:nth-child(even) {
+                background-color: $color-claret;
+            }
+
+            &-status {
+                margin-bottom: 20px;
+            }
+
+            &-item {
+                margin-bottom: 20px;
+                @include flex(flex-start, center, nowrap);
+                column-gap: 20px;
+            }
+
+            &-image {
+                @include flexBasis(60px);
+
+                img {
+                    @include rounded;
+                }
+            }
+
+            &-info {
+                @include flexBasis(calc(100% - 60px - 20px));
+            }
+
+            &-name {
+                margin-bottom: 10px;
+
+                h2 {
+                    color: inherit;
+                    font-family: inherit;
+                    font-size: 1.2em;
+                    font-weight: $font-weight-text-bold;
+                }
+            }
+
+            &-portions {
+                font-size: 0.8em;
+            }
+        }
+    }
+}

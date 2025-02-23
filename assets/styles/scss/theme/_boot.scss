@@ -58,6 +58,14 @@ input {
     outline: none;
 }
 
+button {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    font-weight: inherit;
+    cursor: pointer;
+}
+
 strong {
     font-weight: $font-weight-text-bold;
 }
@@ -183,6 +191,38 @@ strong {
             @include container(600px, 20px, 0);
             @include containerFluid;
             transform: translate(-50%, -50%);
+        }
+    }
+
+    &trigger {
+        padding: 1px 6px;
+        background-color: $color-battleship-gray;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        border: none;
+        font-size: 0.8em;
+        font-weight: $font-weight-text-bold;
+        @include borderRadius(5px);
+
+        &.success {
+            background-color: $color-success;
+            color: $color-success-text;
+        }
+
+        &.info {
+            background-color: $color-info;
+            color: $color-info-text;
+        }
+
+        &.warning {
+            background-color: $color-warning;
+            color: $color-warning-text;
+        }
+
+        &.error {
+            background-color: $color-error;
+            color: $color-error-text;
         }
     }
 }
