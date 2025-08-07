@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    font-family: $font-noto-serif-display;
+    font-family: $font-cormorant-garamond;
     font-size: $font-size-default;
     font-weight: $font-weight-text-normal;
     color: $color-night;
@@ -71,6 +71,10 @@ strong {
     font-weight: $font-weight-text-bold;
 }
 
+i {
+    vertical-align: middle;
+}
+
 @include theme() {
     &button {
         display: inline-flex;
@@ -85,18 +89,27 @@ strong {
         font-size: 1.1em;
         color: $color-white-smoke;
 
+        &:hover {
+            background-color: $color-white-smoke !important;
+        }
+
         &.primary {
             background-color: $color-murrey;
             border-color: $color-murrey;
             
-            &.outline {
+            &:hover, &.outline {
                 color: $color-murrey;
             }
         }
 
         &.secondary {
             background-color: $color-old-gold;
+            border-color: $color-old-gold;
             color: $color-night;
+
+            &:hover, &.outline {
+                color: $color-old-gold;
+            }
         }
 
         &.outline {
@@ -121,6 +134,11 @@ strong {
             visibility: visible;
             opacity: 1;
             bottom: 20px;
+        }
+
+        i {
+            color: $color-old-gold;
+            font-size: 1.4em;
         }
     }
 
