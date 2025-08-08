@@ -60,10 +60,10 @@
                 }
 
                 i {
-                    font-size: 1.6em;
+                    font-size: 1.4em;
 
                     @include setResponsiveDesign($breakpoint-medium) {
-                        font-size: 3.2em;
+                        font-size: 3em;
                     }
                 }
             }

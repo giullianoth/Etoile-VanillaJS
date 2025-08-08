@@ -24,15 +24,16 @@ $color-info-text: #064572;
 $color-warning-text: #B26903;
 $color-error-text: #790707;
 
-$color-night-overlay: #13101199;
-$color-old-gold-overlay: #E2BF4E80;
-$color-night-gradient: linear-gradient($color-night, #13101100);
+$color-night-overlay: rgba($color: $color-night, $alpha: 0.6);
+$color-old-gold-overlay: rgba($color: $color-old-gold, $alpha: 0.5);
+$color-night-gradient: linear-gradient($color-night, rgba($color: $color-night, $alpha: 0));
+$color-murrey-subtle-shadow: rgba($color: $color-murrey, $alpha: 0.1);
 
 // TYPOGRAPHY
 $font-cinzel: "Cinzel", serif;
 $font-cinzel-decorative: "Cinzel Decorative", serif;
 $font-cormorant-garamond: "Cormorant Garamond", serif;
-$font-size-default: 1rem;
+$font-size-default: 1.2rem;
 $font-weight-title: 700;
 $font-weight-text-normal: 200;
 $font-weight-text-bold: 500;
