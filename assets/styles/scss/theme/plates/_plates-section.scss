@@ -5,14 +5,33 @@
         }
 
         &__container {
-            @include container;
+            padding-block: $container-block-clearance;
+
+            @include setResponsiveDesign($breakpoint-small) {
+                @include container;
+            }
+        }
+
+        &__title {
+            padding-inline: $container-inline-clearance;
+
+            @include setResponsiveDesign($breakpoint-small) {
+                padding-inline: 0;
+            }
         }
 
         &__description {
             margin-bottom: 60px;
+            text-align: center;
+            padding-inline: $container-inline-clearance;
+
+            @include setResponsiveDesign($breakpoint-small) {
+                padding-inline: 0;
+            }
 
             @include setResponsiveDesign($breakpoint-large) {
                 width: 50%;
+                text-align: left;
             }
         }
 
@@ -21,6 +40,11 @@
 
             &-title {
                 margin-bottom: 40px;
+                padding-inline: $container-inline-clearance;
+
+                @include setResponsiveDesign($breakpoint-small) {
+                    padding-inline: 0;
+                }
 
                 h3 {
                     color: $color-night;
@@ -29,26 +53,22 @@
         }
 
         &__by-category {
-            @include flex(flex-start, stretch);
-            gap: 20px;
-
             &:not(:last-child) {
                 margin-bottom: 60px;
+            }
+
+            &-wrapper {
+                padding-inline: $container-inline-clearance;
+
+                @include setResponsiveDesign($breakpoint-small) {
+                    padding-inline: 0;
+                }
             }
         }
 
         &__plate {
             @include relative;
             height: 440px;
-            @include flex1;
-
-            @include setResponsiveDesign($breakpoint-medium) {
-                @include flex2(20px);
-            }
-
-            @include setResponsiveDesign($breakpoint-large) {
-                @include flex3(20px);
-            }
 
             &-image {
                 @include containerFluid(true);

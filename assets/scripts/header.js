@@ -7,12 +7,12 @@ const closeIcon = "<i class=\"ph ph-x\"></i>"
 const scrollUpButton = document.querySelector(".j_scroll_up")
 
 // FIXED HEADER
-export const setFixedHeader = () => window.scrollY > 100
+export const SetFixedHeader = () => window.scrollY > 100
     ? header.classList.add("scrolling")
     : header.classList.remove("scrolling")
 
 // MOBILE MENU
-export const mobileMenu = () => {
+export const MobileMenu = () => {
     menuIcon?.addEventListener("click", () => {
         menuNavigationContext.classList.toggle("open-menu")
         menuIcon.innerHTML = menuNavigationContext.classList.contains("open-menu") ? closeIcon : hamburgerIcon
@@ -27,8 +27,8 @@ export const mobileMenu = () => {
 }
 
 // SCROLL UP
-export const showScrollUpButton = () => window.scrollY > 100
+export const ShowScrollUpButton = () => window.scrollY > 100
     ? scrollUpButton.classList.add("visible")
     : scrollUpButton.classList.remove("visible")
 
-export const scrollUp = () => scrollUpButton.addEventListener("click", () => window.scrollTo(0, 0))
+export const ScrollUp = () => scrollUpButton.addEventListener("click", () => window.scrollTo(0, 0))

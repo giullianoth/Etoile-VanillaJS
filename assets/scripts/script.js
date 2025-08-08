@@ -1,11 +1,20 @@
-import { mobileMenu, scrollUp, setFixedHeader, showScrollUpButton } from "./header.js"
+import Carousel from "./carousel.js"
+import { MobileMenu, ScrollUp, SetFixedHeader, ShowScrollUpButton } from "./header.js"
 
-setFixedHeader()
-mobileMenu()
-showScrollUpButton()
-scrollUp()
+// Header
+SetFixedHeader()
+MobileMenu()
+ShowScrollUpButton()
+ScrollUp()
+
+// Carousel
+Carousel()
 
 window.addEventListener("scroll", () => {
-    setFixedHeader()
-    showScrollUpButton()
+    SetFixedHeader()
+    ShowScrollUpButton()
+})
+
+window.addEventListener("resize", () => {
+    Carousel()
 })
