@@ -79,7 +79,7 @@ strong {
   font-weight: 500;
 }
 
-i {
+i.ph {
   vertical-align: middle;
 }
 
@@ -95,6 +95,7 @@ i {
   font-family: "Cinzel", serif;
   font-size: 1.1em;
   color: #F6F4F5;
+  transition: all 0.3s ease 0s;
 }
 .etl-button:hover {
   background-color: #F6F4F5 !important;
@@ -272,6 +273,7 @@ i {
   height: 100%;
   z-index: 110;
   background-color: rgba(19, 16, 17, 0.6);
+  display: none;
 }
 .etl-modal__wrapper {
   position: absolute;
@@ -372,7 +374,7 @@ i {
   background-color: #131011;
 }
 .etl-header.scrolling .etl-header__container {
-  padding-block: 20px;
+  padding-block: 10px;
 }
 .etl-header.authenticated {
   background-image: none;
@@ -610,6 +612,7 @@ i {
 }
 .etl-footer__menu-title h2 {
   color: #E2BF4E;
+  font-weight: 500;
 }
 .etl-footer__menu-list {
   display: flex;
@@ -953,16 +956,36 @@ i {
   padding: 80px 20px;
   margin-inline: auto;
 }
+.etl-plates-plates__description {
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 992px) {
+  .etl-plates-plates__description {
+    width: 50%;
+  }
+}
 .etl-plates-plates__list {
+  margin-top: 60px;
+}
+.etl-plates-plates__list-title {
+  margin-bottom: 40px;
+}
+.etl-plates-plates__list-title h3 {
+  color: #131011;
+}
+.etl-plates-plates__by-category {
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
   flex-wrap: wrap;
   gap: 20px;
 }
+.etl-plates-plates__by-category:not(:last-child) {
+  margin-bottom: 60px;
+}
 .etl-plates-plates__plate {
   position: relative;
-  height: 360px;
+  height: 440px;
   flex-basis: 100%;
 }
 @media screen and (min-width: 768px) {
@@ -996,16 +1019,22 @@ i {
 .etl-plates-plates__plate-name {
   margin-bottom: 10px;
 }
-.etl-plates-plates__plate-name h2 {
+.etl-plates-plates__plate-name h4 {
   font-family: "Cinzel", serif;
   font-size: 0.9em;
   line-height: 1;
   color: #131011;
 }
+.etl-plates-plates__plate-description {
+  line-height: 1;
+  color: #131011;
+  margin-bottom: 10px;
+}
 .etl-plates-plates__plate-price {
-  font-size: 1.8em;
+  font-size: 1.4em;
   font-family: "Cinzel Decorative", serif;
   font-weight: 700;
+  text-align: right;
 }
 
 .etl-plates-selected {

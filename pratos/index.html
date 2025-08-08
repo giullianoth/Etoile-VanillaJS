@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
 
     <link rel="stylesheet" href="/assets/styles/css/style.min.css">
 </head>
+
 <body>
     <header class="etl-header j_header">
         <div class="etl-header__container">
@@ -22,22 +24,22 @@
 
             <nav class="etl-header__navigation j_menu_navigation_context">
                 <div class="etl-header__navigation-profile">
-                    <a href="/perfil">
-                        <img src="/assets/images/user-circle.svg" alt="Perfil">
+                    <a href="/perfil" title="Meu Perfil">
+                        <i class="ph ph-user-circle"></i>
                     </a>
                 </div>
 
                 <div class="etl-header__navigation-cart">
-                    <a href="/carrinho">
-                        <img src="/assets/images/shopping-cart-simple.svg" alt="Carrinho">
+                    <a href="/carrinho" title="Carrinho">
+                        <i class="ph ph-shopping-cart-simple"></i>
                     </a>
                 </div>
 
-                <div class="etl-header__navigation-menu-icon">
-                    <img src="/assets/images/hamburger.svg" alt="Open Menu" class="j_menu_icon">
+                <div class="etl-header__navigation-menu-icon j_menu_icon">
+                    <i class="ph ph-list"></i>
                 </div>
 
-                <div class="etl-header__navigation-overlay">
+                <div class="etl-header__navigation-overlay j_menu_overlay">
                     <div class="etl-header__navigation-menu-wrapper">
                         <ul class="etl-header__main-menu">
                             <li class="etl-header__main-menu-item">
@@ -70,50 +72,98 @@
         <section class="etl-plates-plates__section">
             <div class="etl-plates-plates__container">
                 <header class="etl-section-heading">
-                    <h1>Confira nossos pratos</h1>
+                    <h2>Confira nossos pratos</h2>
                 </header>
 
+                <p class="etl-plates-plates__description">Uma cozinha saudável e genuína, onde ingredientes excepcionais
+                    se unem à paixão pelo sabor. Com propostas frescas e originais, satisfazemos os desejos de toda a
+                    família, dos aperitivos às sobremesas. Descubra a nossa excelência culinária todos os dias.</p>
+
+                <div class="etl-divider">
+                    <img src="/assets/images/divider.svg" alt="Divider">
+                </div>
+
                 <div class="etl-plates-plates__list">
-                    <article class="etl-plates-plates__plate">
-                        <a href="#">
-                            <img src="/assets/images/plate.jpg" alt="Shrimp and Vegetable Salad" class="etl-plates-plates__plate-image">
+                    <header class="etl-plates-plates__list-title">
+                        <h3>Entradas</h3>
+                    </header>
 
-                            <div class="etl-plates-plates__plate-info">
-                                <header class="etl-plates-plates__plate-name">
-                                    <h2>Shrimp and Vegetable Salad</h2>
-                                </header>
+                    <article class="etl-plates-plates__by-category">
+                        <article class="etl-plates-plates__plate">
+                            <a href="#">
+                                <img src="/assets/images/plate.jpg" alt="Prato 1"
+                                    class="etl-plates-plates__plate-image">
 
-                                <p class="etl-plates-plates__plate-price">$ 10,99</p>
-                            </div>
-                        </a>
-                    </article>
+                                <div class="etl-plates-plates__plate-info">
+                                    <header class="etl-plates-plates__plate-name">
+                                        <h4>Prato 1</h4>
+                                    </header>
 
-                    <article class="etl-plates-plates__plate">
-                        <a href="#">
-                            <img src="/assets/images/plate.jpg" alt="Shrimp and Vegetable Salad" class="etl-plates-plates__plate-image">
+                                    <p class="etl-plates-plates__plate-description">Lorem ipsum dolor sit amet,
+                                        consectetur
+                                        adipisicing elit. Saepe, obcaecati.</p>
 
-                            <div class="etl-plates-plates__plate-info">
-                                <header class="etl-plates-plates__plate-name">
-                                    <h2>Shrimp and Vegetable Salad</h2>
-                                </header>
+                                    <p class="etl-plates-plates__plate-price">$ 10,99</p>
+                                </div>
+                            </a>
+                        </article>
 
-                                <p class="etl-plates-plates__plate-price">$ 10,99</p>
-                            </div>
-                        </a>
-                    </article>
+                        <article class="etl-plates-plates__plate">
+                            <a href="#">
+                                <img src="/assets/images/plate.jpg" alt="Prato 2"
+                                    class="etl-plates-plates__plate-image">
 
-                    <article class="etl-plates-plates__plate">
-                        <a href="#">
-                            <img src="/assets/images/plate.jpg" alt="Shrimp and Vegetable Salad" class="etl-plates-plates__plate-image">
+                                <div class="etl-plates-plates__plate-info">
+                                    <header class="etl-plates-plates__plate-name">
+                                        <h4>Prato 2</h4>
+                                    </header>
 
-                            <div class="etl-plates-plates__plate-info">
-                                <header class="etl-plates-plates__plate-name">
-                                    <h2>Shrimp and Vegetable Salad</h2>
-                                </header>
+                                    <p class="etl-plates-plates__plate-description">Lorem ipsum dolor sit amet,
+                                        consectetur
+                                        adipisicing elit. Saepe, obcaecati.</p>
 
-                                <p class="etl-plates-plates__plate-price">$ 10,99</p>
-                            </div>
-                        </a>
+                                    <p class="etl-plates-plates__plate-price">$ 10,99</p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="etl-plates-plates__plate">
+                            <a href="#">
+                                <img src="/assets/images/plate.jpg" alt="Prato 3"
+                                    class="etl-plates-plates__plate-image">
+
+                                <div class="etl-plates-plates__plate-info">
+                                    <header class="etl-plates-plates__plate-name">
+                                        <h4>Prato 3</h>
+                                    </header>
+
+                                    <p class="etl-plates-plates__plate-description">Lorem ipsum dolor sit amet,
+                                        consectetur
+                                        adipisicing elit. Saepe, obcaecati.</p>
+
+                                    <p class="etl-plates-plates__plate-price">$ 10,99</p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="etl-plates-plates__plate">
+                            <a href="#">
+                                <img src="/assets/images/plate.jpg" alt="Prato 4"
+                                    class="etl-plates-plates__plate-image">
+
+                                <div class="etl-plates-plates__plate-info">
+                                    <header class="etl-plates-plates__plate-name">
+                                        <h4>Prato 4</h>
+                                    </header>
+
+                                    <p class="etl-plates-plates__plate-description">Lorem ipsum dolor sit amet,
+                                        consectetur
+                                        adipisicing elit. Saepe, obcaecati.</p>
+
+                                    <p class="etl-plates-plates__plate-price">$ 10,99</p>
+                                </div>
+                            </a>
+                        </article>
                     </article>
                 </div>
             </div>
@@ -125,15 +175,16 @@
                     <div class="etl-plates-selected__image">
                         <img src="/assets/images/plate.jpg" alt="Shrimp and Vegetable Salad">
                     </div>
-    
+
                     <header class="etl-plates-selected__name">
                         <h1>Shrimp and Vegetable Salad</h1>
                     </header>
-    
+
                     <p class="etl-plates-selected__description">
-                        A fresh mixed salad with cooked shrimp, seasonal vegetables, and a secret dressing that will make your lunch or dinner shine!
+                        A fresh mixed salad with cooked shrimp, seasonal vegetables, and a secret dressing that will
+                        make your lunch or dinner shine!
                     </p>
-    
+
                     <div class="etl-plates-selected__cta">
                         <p class="etl-plates-selected__cta-price">$ 10,99</p>
                         <a href="#" class="etl-button primary etl-plates-selected__cta-button">
@@ -152,7 +203,7 @@
                 <a href="/" class="etl-footer__logo-link">
                     <img src="/assets/images/logo.svg" alt="Étoile Bistrò">
                 </a>
-                    
+
                 <p class="etl-footer__logo-subtitle">Paixão da nossa cozinha à sua mesa.</p>
             </div>
 
@@ -178,7 +229,10 @@
         </div>
 
         <p class="etl-footer__attribution">
-            &copy; <span class="j_copy_year">2025</span> - Desenvolvido por <a href="https://github.com/giullianoth" target="_blank" rel="noopener noreferrer">Giulliano Guimarães</a>. Baseado no projeto de <a href="https://www.youtube.com/playlist?list=PL45Hr6NzteIJQyvk6v0T78Ye8IsGm0mYS" target="_blank" rel="noopener noreferrer">Eduardo Pazitto</a>.
+            &copy; <span class="j_copy_year">2025</span> - Desenvolvido por <a href="https://github.com/giullianoth"
+                target="_blank" rel="noopener noreferrer">Giulliano Guimarães</a>. Baseado no projeto de <a
+                href="https://www.youtube.com/playlist?list=PL45Hr6NzteIJQyvk6v0T78Ye8IsGm0mYS" target="_blank"
+                rel="noopener noreferrer">Eduardo Pazitto</a>.
         </p>
     </footer>
 
@@ -186,6 +240,8 @@
         <img src="/assets/images/arrow-up.svg" alt="Scroll up">
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
     <script type="module" src="/assets/scripts/script.js"></script>
 </body>
+
 </html>

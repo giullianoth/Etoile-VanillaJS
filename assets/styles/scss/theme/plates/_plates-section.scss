@@ -8,14 +8,38 @@
             @include container;
         }
 
+        &__description {
+            margin-bottom: 60px;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                width: 50%;
+            }
+        }
+
         &__list {
+            margin-top: 60px;
+
+            &-title {
+                margin-bottom: 40px;
+
+                h3 {
+                    color: $color-night;
+                }
+            }
+        }
+
+        &__by-category {
             @include flex(flex-start, stretch);
             gap: 20px;
+
+            &:not(:last-child) {
+                margin-bottom: 60px;
+            }
         }
 
         &__plate {
             @include relative;
-            height: 360px;
+            height: 440px;
             @include flex1;
 
             @include setResponsiveDesign($breakpoint-medium) {
@@ -45,7 +69,7 @@
             &-name {
                 margin-bottom: 10px;
 
-                h2 {
+                h4 {
                     font-family: $font-cinzel;
                     font-size: 0.9em;
                     line-height: 1;
@@ -53,10 +77,17 @@
                 }
             }
 
+            &-description {
+                line-height: 1;
+                color: $color-night;
+                margin-bottom: 10px;
+            }
+
             &-price {
-                font-size: 1.8em;
+                font-size: 1.4em;
                 font-family: $font-cinzel-decorative;
                 font-weight: $font-weight-title;
+                text-align: right;
             }
         }
     }

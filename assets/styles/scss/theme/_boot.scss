@@ -71,7 +71,7 @@ strong {
     font-weight: $font-weight-text-bold;
 }
 
-i {
+i.ph {
     vertical-align: middle;
 }
 
@@ -88,6 +88,7 @@ i {
         font-family: $font-cinzel;
         font-size: 1.1em;
         color: $color-white-smoke;
+        @include transition;
 
         &:hover {
             background-color: $color-white-smoke !important;
@@ -204,6 +205,7 @@ i {
         @include fixedFull(0, 0, true);
         @include indexLevel3;
         background-color: $color-night-overlay;
+        display: none;
 
         &__wrapper {
             @include absolute(50%, 50%);
