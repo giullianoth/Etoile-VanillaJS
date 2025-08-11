@@ -69,6 +69,7 @@
         &__plate {
             @include relative;
             height: 440px;
+            cursor: pointer;
 
             &-image {
                 @include containerFluid(true);
@@ -107,6 +108,7 @@
                 font-size: 1.4em;
                 font-family: $font-cinzel-decorative;
                 font-weight: $font-weight-title;
+                color: $color-claret;
                 text-align: right;
             }
         }

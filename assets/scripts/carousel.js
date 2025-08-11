@@ -1,6 +1,5 @@
 const carousels = document.querySelectorAll(".j_carousel")
 const carouselWrapper = carousel => carousel.querySelector(".j_carousel_wrapper")
-const carouselWrapperDimension = wrapper => wrapper.offsetWidth
 const carouselItems = carousel => carousel.querySelectorAll(".j_carousel_item")
 const carouselItemDimension = (carouselItem, gap) => carouselItem.offsetWidth + gap
 const carouselButtons = carousel => carousel.querySelectorAll(".j_navigation")
@@ -22,9 +21,16 @@ const Carousel = () => {
         const gap = parseInt(carousel.dataset.gap)
         const buttonPrev = navigationButtonElement("prev")
         const buttonNext = navigationButtonElement("next")
+        const carouselLength = carouselItems(carousel).length
+        let carouselOrder = 1
         let itemsQt
         let itemDimension
         let clearance
+        let currentDirection
+        let firstItem = true
+        let lastItem = false
+
+        carouselWrapper(carousel).style.transform = ""
 
         if (window.innerWidth <= 576) {
             itemsQt = 1
@@ -34,21 +40,74 @@ const Carousel = () => {
             itemsQt = parseInt(carousel.dataset.itemsqt)
         }
 
-        carousel.append(buttonPrev, buttonNext)
-        carouselWrapper(carousel).style.gap = `${gap}px`
+        clearance = 40 /*/ itemsQt*/
+        const adjustedWidth = `calc(${100 / itemsQt}% - ${gap}px + (${gap}px / ${itemsQt}) - ${clearance}px)`
 
         Array.from(carouselItems(carousel)).forEach(item => {
-            clearance = 40 / itemsQt
-            const adjustedWidth = `calc(${100 / itemsQt}% - ${gap}px + (${gap}px / ${itemsQt}) - ${clearance}px)`
             item.style.flexBasis = adjustedWidth
             item.style.minWidth = adjustedWidth
             itemDimension = carouselItemDimension(item, gap)
         })
 
-        Array.from(carouselButtons(carousel)).forEach(button => {
+        buttonPrev.classList.add("not-visible")
+        carousel.append(buttonPrev, buttonNext)
+        carouselWrapper(carousel).style.gap = `${gap}px`
+
+        Array.from(carouselButtons(carousel)).forEach((button, i, arr) => {
             button.addEventListener("click", () => {
-                console.log(itemDimension, carouselWrapperDimension(carouselWrapper(carousel)));
-                
+                arr.forEach(item => item.classList.remove("not-visible"))
+
+                if (button.classList.contains("next")) {
+                    if (currentDirection === "prev") {
+                        carouselOrder++
+                    }
+
+                    if (lastItem) {
+                        button.classList.add("not-visible")
+                    }
+
+                    firstItem = false
+
+                    let wrapperOffset = carouselOrder === carouselLength - itemsQt
+                        ? (itemDimension * carouselOrder) - (clearance * length)
+                        : itemDimension * carouselOrder
+
+                    carouselWrapper(carousel).style.transform = `translateX(-${wrapperOffset}px)`
+
+                    console.log(carouselOrder);
+                    
+                    if (carouselOrder < carouselLength - itemsQt) {
+                        carouselOrder++
+                        lastItem = true
+                    }
+
+                    currentDirection = "next"
+                }
+
+                if (button.classList.contains("prev")) {
+                    if (currentDirection === "next") {
+                        carouselOrder--
+                    }
+
+                    if (firstItem) {
+                        button.classList.add("not-visible")
+                    }
+
+                    lastItem = false
+
+                    let wrapperOffset = carouselOrder === 1
+                        ? (itemDimension * carouselOrder) - (clearance * itemsQt)
+                        : -(itemDimension * carouselOrder)
+
+                    carouselWrapper(carousel).style.transform = `translateX(-${wrapperOffset}px)`
+
+                    if (carouselOrder >= 1) {
+                        carouselOrder--
+                        firstItem = true
+                    }
+
+                    currentDirection = "prev"
+                }
             })
         })
     })

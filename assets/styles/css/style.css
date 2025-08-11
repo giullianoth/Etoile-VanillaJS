@@ -388,6 +388,9 @@ i.ph {
 .etl-carousel__navigation.next {
   right: 5px;
 }
+.etl-carousel__navigation.not-visible {
+  display: none;
+}
 
 /* HEADER CONFIG */
 .etl-header {
@@ -1043,6 +1046,7 @@ i.ph {
 .etl-plates-plates__plate {
   position: relative;
   height: 440px;
+  cursor: pointer;
 }
 .etl-plates-plates__plate-image {
   width: 100%;
@@ -1080,6 +1084,7 @@ i.ph {
   font-size: 1.4em;
   font-family: "Cinzel Decorative", serif;
   font-weight: 700;
+  color: #6F0231;
   text-align: right;
 }
 

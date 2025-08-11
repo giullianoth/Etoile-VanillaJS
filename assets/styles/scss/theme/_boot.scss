@@ -303,6 +303,10 @@ i.ph {
             &.next {
                 right: 5px;
             }
+
+            &.not-visible {
+                display: none;
+            }
         }
     }
 }
