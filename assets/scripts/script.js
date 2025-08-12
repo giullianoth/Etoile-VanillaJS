@@ -1,4 +1,5 @@
 import Carousel from "./carousel.js"
+import Copyright from "./copyright.js"
 import { MobileMenu, ScrollUp, SetFixedHeader, ShowScrollUpButton } from "./header.js"
 import Modal from "./modal.js"
 
@@ -13,6 +14,9 @@ Carousel()
 
 // Modal
 Modal()
+
+// Copyright
+Copyright()
 
 window.addEventListener("scroll", () => {
     SetFixedHeader()
