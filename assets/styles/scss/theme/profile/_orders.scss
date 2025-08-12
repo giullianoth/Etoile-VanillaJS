@@ -22,6 +22,8 @@
 
         &__order {
             @include flex1;
+            @include flex(flex-start, stretch, nowrap);
+            @include column;
             background-color: $color-murrey;
             color: $color-white-smoke;
             padding: 20px;
@@ -53,7 +55,7 @@
 
             &-item {
                 margin-bottom: 20px;
-                @include flex(flex-start, center, nowrap);
+                @include flex(flex-start, flex-start, nowrap);
                 column-gap: 20px;
             }
 
@@ -77,11 +79,16 @@
                     font-family: inherit;
                     font-size: 1.2em;
                     font-weight: $font-weight-text-bold;
+                    line-height: 1;
                 }
             }
 
             &-portions {
                 font-size: 0.8em;
+            }
+
+            &-actions {
+                margin-top: auto;
             }
         }
     }

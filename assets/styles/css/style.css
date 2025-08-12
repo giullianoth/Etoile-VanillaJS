@@ -1510,6 +1510,11 @@ i.ph {
 }
 .etl-profile-orders__order {
   flex-basis: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  flex-direction: column;
   background-color: #9A0245;
   color: #F6F4F5;
   padding: 20px;
@@ -1541,7 +1546,7 @@ i.ph {
   margin-bottom: 20px;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: nowrap;
   column-gap: 20px;
 }
@@ -1564,7 +1569,11 @@ i.ph {
   font-family: inherit;
   font-size: 1.2em;
   font-weight: 500;
+  line-height: 1;
 }
 .etl-profile-orders__order-portions {
   font-size: 0.8em;
+}
+.etl-profile-orders__order-actions {
+  margin-top: auto;
 }
