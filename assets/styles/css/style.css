@@ -487,7 +487,12 @@ i.ph {
   color: #F6F4F5;
 }
 .etl-header__navigation-profile i, .etl-header__navigation-cart i, .etl-header__navigation-menu-icon i, .etl-header__navigation-logout i {
-  font-size: 1.4em;
+  font-size: 1.2em;
+}
+@media screen and (min-width: 992px) {
+  .etl-header__navigation-profile i, .etl-header__navigation-cart i, .etl-header__navigation-menu-icon i, .etl-header__navigation-logout i {
+    font-size: 1em;
+  }
 }
 .etl-header__navigation-profile {
   display: none;

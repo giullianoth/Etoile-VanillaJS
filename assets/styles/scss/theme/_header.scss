@@ -92,7 +92,11 @@
                 }
 
                 i {
-                    font-size: 1.4em;
+                    font-size: 1.2em;
+
+                    @include setResponsiveDesign($breakpoint-large) {
+                        font-size: 1em;
+                    }
                 }
             }
 
