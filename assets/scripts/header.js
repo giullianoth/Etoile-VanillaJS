@@ -7,7 +7,7 @@ const closeIcon = "<i class=\"ph ph-x\"></i>"
 const scrollUpButton = document.querySelector(".j_scroll_up")
 
 // FIXED HEADER
-export const SetFixedHeader = () => window.scrollY > 100
+export const SetFixedHeader = () => window.scrollY > 0
     ? header.classList.add("scrolling")
     : header.classList.remove("scrolling")
 
@@ -27,7 +27,7 @@ export const MobileMenu = () => {
 }
 
 // SCROLL UP
-export const ShowScrollUpButton = () => window.scrollY > 100
+export const ShowScrollUpButton = () => window.scrollY > 0
     ? scrollUpButton.classList.add("visible")
     : scrollUpButton.classList.remove("visible")
 

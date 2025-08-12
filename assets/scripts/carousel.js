@@ -21,12 +21,12 @@ const Carousel = () => {
         const gap = parseInt(carousel.dataset.gap)
         const carouselLength = carouselItems(carousel).length
         let carouselOrder = 1
+        let firstItem = true
+        let lastItem = false
         let itemsQt
         let itemDimension
         let clearance
         let currentDirection
-        let firstItem = true
-        let lastItem = false
 
         carouselWrapper(carousel).style.transform = ""
 
@@ -79,7 +79,7 @@ const Carousel = () => {
                     firstItem = false
 
                     const wrapperOffset = carouselOrder === carouselLength - itemsQt
-                        ? (itemDimension * carouselOrder) - clearance - gap
+                        ? (itemDimension * carouselOrder) - clearance - gap - (gap / itemsQt)
                         : itemDimension * carouselOrder
 
                     carouselWrapper(carousel).style.transform = `translateX(-${wrapperOffset}px)`
@@ -107,7 +107,7 @@ const Carousel = () => {
 
                     const wrapperOffset = carouselOrder < 1
                         ? itemDimension * carouselOrder
-                        : (itemDimension * carouselOrder) - clearance - gap
+                        : (itemDimension * carouselOrder) - clearance - gap - (gap / itemsQt)
 
                     carouselWrapper(carousel).style.transform = `translateX(-${wrapperOffset}px)`
 
