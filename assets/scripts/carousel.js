@@ -19,8 +19,6 @@ const navigationButtonElement = direction => {
 const Carousel = () => {
     Array.from(carousels).forEach(carousel => {
         const gap = parseInt(carousel.dataset.gap)
-        const buttonPrev = navigationButtonElement("prev")
-        const buttonNext = navigationButtonElement("next")
         const carouselLength = carouselItems(carousel).length
         let carouselOrder = 1
         let itemsQt
@@ -40,7 +38,7 @@ const Carousel = () => {
             itemsQt = parseInt(carousel.dataset.itemsqt)
         }
 
-        clearance = 40 /*/ itemsQt*/
+        clearance = 40 / itemsQt
         const adjustedWidth = `calc(${100 / itemsQt}% - ${gap}px + (${gap}px / ${itemsQt}) - ${clearance}px)`
 
         Array.from(carouselItems(carousel)).forEach(item => {
@@ -49,36 +47,48 @@ const Carousel = () => {
             itemDimension = carouselItemDimension(item, gap)
         })
 
-        buttonPrev.classList.add("not-visible")
-        carousel.append(buttonPrev, buttonNext)
         carouselWrapper(carousel).style.gap = `${gap}px`
 
+        if (!carouselButtons(carousel) || !carouselButtons(carousel).length) {
+            const buttonPrev = navigationButtonElement("prev")
+            const buttonNext = navigationButtonElement("next")
+            carousel.append(buttonPrev, buttonNext)
+        }
+
         Array.from(carouselButtons(carousel)).forEach((button, i, arr) => {
+            if (button.classList.contains("prev")) {
+                button.classList.add("not-visible")
+            }
+
+            if (button.classList.contains("next")) {
+                button.classList.remove("not-visible")
+            }
+
             button.addEventListener("click", () => {
                 arr.forEach(item => item.classList.remove("not-visible"))
 
                 if (button.classList.contains("next")) {
                     if (currentDirection === "prev") {
                         carouselOrder++
-                    }
 
-                    if (lastItem) {
-                        button.classList.add("not-visible")
+                        if (!firstItem) {
+                            carouselOrder++
+                        }
                     }
 
                     firstItem = false
 
-                    let wrapperOffset = carouselOrder === carouselLength - itemsQt
-                        ? (itemDimension * carouselOrder) - (clearance * length)
+                    const wrapperOffset = carouselOrder === carouselLength - itemsQt
+                        ? (itemDimension * carouselOrder) - clearance - gap
                         : itemDimension * carouselOrder
 
                     carouselWrapper(carousel).style.transform = `translateX(-${wrapperOffset}px)`
 
-                    console.log(carouselOrder);
-                    
                     if (carouselOrder < carouselLength - itemsQt) {
                         carouselOrder++
+                    } else {
                         lastItem = true
+                        button.classList.add("not-visible")
                     }
 
                     currentDirection = "next"
@@ -87,23 +97,25 @@ const Carousel = () => {
                 if (button.classList.contains("prev")) {
                     if (currentDirection === "next") {
                         carouselOrder--
-                    }
 
-                    if (firstItem) {
-                        button.classList.add("not-visible")
+                        if (!lastItem) {
+                            carouselOrder--
+                        }
                     }
 
                     lastItem = false
 
-                    let wrapperOffset = carouselOrder === 1
-                        ? (itemDimension * carouselOrder) - (clearance * itemsQt)
-                        : -(itemDimension * carouselOrder)
+                    const wrapperOffset = carouselOrder < 1
+                        ? itemDimension * carouselOrder
+                        : (itemDimension * carouselOrder) - clearance - gap
 
                     carouselWrapper(carousel).style.transform = `translateX(-${wrapperOffset}px)`
 
                     if (carouselOrder >= 1) {
                         carouselOrder--
+                    } else {
                         firstItem = true
+                        button.classList.add("not-visible")
                     }
 
                     currentDirection = "prev"
