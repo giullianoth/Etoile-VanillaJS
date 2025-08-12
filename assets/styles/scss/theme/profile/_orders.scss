@@ -42,6 +42,15 @@
                 margin-bottom: 20px;
             }
 
+            &-pickupdate {
+                font-family: $font-cinzel;
+                margin-bottom: 20px;
+
+                strong {
+                    font-weight: 700;
+                }
+            }
+
             &-item {
                 margin-bottom: 20px;
                 @include flex(flex-start, center, nowrap);

@@ -1530,6 +1530,13 @@ i.ph {
 .etl-profile-orders__order-status {
   margin-bottom: 20px;
 }
+.etl-profile-orders__order-pickupdate {
+  font-family: "Cinzel", serif;
+  margin-bottom: 20px;
+}
+.etl-profile-orders__order-pickupdate strong {
+  font-weight: 700;
+}
 .etl-profile-orders__order-item {
   margin-bottom: 20px;
   display: flex;
