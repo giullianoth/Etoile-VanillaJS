@@ -118,6 +118,10 @@ i.ph {
 .etl-button.outline {
   background-color: transparent;
 }
+.etl-button.small {
+  padding: 6px;
+  font-size: 0.8em;
+}
 .etl-scroll-up {
   position: fixed;
   top: unset;
@@ -406,7 +410,7 @@ i.ph {
   background-color: #131011;
 }
 .etl-header.scrolling .etl-header__container {
-  padding-block: 10px;
+  padding-block: 10px !important;
 }
 .etl-header.authenticated {
   background-image: none;
@@ -1457,6 +1461,28 @@ i.ph {
 .etl-profile-user__name {
   margin-bottom: 10px;
 }
+.etl-profile-user__email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (min-width: 992px) {
+  .etl-profile-user__email {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+.etl-profile-user__edit {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+}
+.etl-profile-user__edit:hover {
+  color: #F6F4F5 !important;
+  background-color: #9A0245 !important;
+}
 
 .etl-profile-orders {
   width: 100%;
@@ -1526,7 +1552,7 @@ i.ph {
 .etl-profile-orders__order-name {
   margin-bottom: 10px;
 }
-.etl-profile-orders__order-name h2 {
+.etl-profile-orders__order-name h3 {
   color: inherit;
   font-family: inherit;
   font-size: 1.2em;

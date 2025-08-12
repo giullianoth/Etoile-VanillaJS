@@ -23,19 +23,19 @@
             <nav class="etl-header__navigation j_menu_navigation_context">
                 <div class="etl-header__navigation-logout">
                     <a href="#" title="Sair">
-                        <img src="/assets/images/sign-out.svg" alt="Sair">
+                        <i class="ph ph-sign-out"></i>
                     </a>
                 </div>
 
                 <div class="etl-header__navigation-profile">
-                    <a href="/perfil">
-                        <img src="/assets/images/user-circle.svg" alt="Perfil">
+                    <a href="/perfil" title="Meu Perfil">
+                        <i class="ph ph-user-circle"></i>
                     </a>
                 </div>
 
                 <div class="etl-header__navigation-cart">
-                    <a href="/carrinho">
-                        <img src="/assets/images/shopping-cart-simple.svg" alt="Carrinho">
+                    <a href="/carrinho" title="Carrinho">
+                        <i class="ph ph-shopping-cart-simple"></i>
                     </a>
                 </div>
 
@@ -53,10 +53,17 @@
 
                 <div class="etl-profile-user__info">
                     <header class="etl-section-heading etl-profile-user__name">
-                        <h1>Perfil de Giulliano Guimarães</h1>
+                        <h2>Perfil de Giulliano Guimarães</h2>
                     </header>
 
-                    <p class="etl-profile-user__email">giulliano@email.com</p>
+                    <p class="etl-profile-user__email">
+                        giulliano@email.com
+
+                        <button class="etl-button primary outline small etl-profile-user__edit">
+                            <i class="ph ph-note-pencil"></i>
+                            Editar perfil / Alterar senha
+                        </button>
+                    </p>
                 </div>
             </div>
         </section>
@@ -64,7 +71,7 @@
         <section class="etl-profile-orders">
             <div class="etl-profile-orders__container">
                 <header class="etl-section-heading etl-profile-orders__title">
-                    <h1>Meus pedidos</h1>
+                    <h2>Meus pedidos</h2>
                 </header>
 
                 <p class="etl-profile-orders__empty">
@@ -75,7 +82,7 @@
                     <section class="etl-profile-orders__order">
                         <div class="etl-profile-orders__order-status">
                             <p class="etl-trigger warning">
-                                <img src="/assets/images/clock.svg" alt="Clock icon">
+                                <i class="ph ph-clock"></i>
                                 Pendente
                             </p>
                         </div>
@@ -87,7 +94,7 @@
 
                             <div class="etl-profile-orders__order-info">
                                 <header class="etl-profile-orders__order-name">
-                                    <h2>Shrimp and Vegetable Salad</h2>
+                                    <h3>Shrimp and Vegetable Salad</h3>
                                 </header>
 
                                 <p class="etl-profile-orders__order-portions">
@@ -103,7 +110,7 @@
 
                             <div class="etl-profile-orders__order-info">
                                 <header class="etl-profile-orders__order-name">
-                                    <h2>Shrimp and Vegetable Salad</h2>
+                                    <h3>Shrimp and Vegetable Salad</h3>
                                 </header>
 
                                 <p class="etl-profile-orders__order-portions">
@@ -114,12 +121,12 @@
 
                         <div class="etl-profile-orders__order-actions">
                             <button class="etl-trigger info">
-                                <img src="/assets/images/edit.svg" alt="Editar">
+                                <i class="ph ph-note-pencil"></i>
                                 Editar
                             </button>
 
                             <button class="etl-trigger error">
-                                <img src="/assets/images/trash.svg" alt="Excluir">
+                                <i class="ph ph-trash"></i>
                                 Excluir
                             </button>
                         </div>
@@ -128,7 +135,7 @@
                     <section class="etl-profile-orders__order">
                         <div class="etl-profile-orders__order-status">
                             <p class="etl-trigger error">
-                                <img src="/assets/images/warning-circle.svg" alt="Warning icon">
+                                <i class="ph ph-warning-circle"></i>
                                 Cancelado
                             </p>
                         </div>
@@ -140,7 +147,7 @@
 
                             <div class="etl-profile-orders__order-info">
                                 <header class="etl-profile-orders__order-name">
-                                    <h2>Shrimp and Vegetable Salad</h2>
+                                    <h3>Shrimp and Vegetable Salad</h3>
                                 </header>
 
                                 <p class="etl-profile-orders__order-portions">
@@ -151,12 +158,12 @@
 
                         <div class="etl-profile-orders__order-actions">
                             <button class="etl-trigger info">
-                                <img src="/assets/images/edit.svg" alt="Editar">
+                                <i class="ph ph-note-pencil"></i>
                                 Editar
                             </button>
 
                             <button class="etl-trigger error">
-                                <img src="/assets/images/trash.svg" alt="Excluir">
+                                <i class="ph ph-trash"></i>
                                 Excluir
                             </button>
                         </div>
@@ -165,7 +172,7 @@
                     <section class="etl-profile-orders__order">
                         <div class="etl-profile-orders__order-status">
                             <p class="etl-trigger success">
-                                <img src="/assets/images/check-circle.svg" alt="Check icon">
+                                <i class="ph ph-check-circle"></i>
                                 Concluído
                             </p>
                         </div>
@@ -177,7 +184,7 @@
 
                             <div class="etl-profile-orders__order-info">
                                 <header class="etl-profile-orders__order-name">
-                                    <h2>Shrimp and Vegetable Salad</h2>
+                                    <h3>Shrimp and Vegetable Salad</h3>
                                 </header>
 
                                 <p class="etl-profile-orders__order-portions">
@@ -188,12 +195,12 @@
 
                         <div class="etl-profile-orders__order-actions">
                             <button class="etl-trigger info">
-                                <img src="/assets/images/edit.svg" alt="Editar">
+                                <i class="ph ph-note-pencil"></i>
                                 Editar
                             </button>
 
                             <button class="etl-trigger error">
-                                <img src="/assets/images/trash.svg" alt="Excluir">
+                                <i class="ph ph-trash"></i>
                                 Excluir
                             </button>
                         </div>
@@ -216,9 +223,10 @@
     </footer>
 
     <div class="etl-scroll-up j_scroll_up" title="Ir ao topo">
-        <img src="/assets/images/arrow-up.svg" alt="Scroll up">
+        <i class="ph ph-caret-up"></i>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
     <script type="module" src="/assets/scripts/script.js"></script>
 </body>
 </html>

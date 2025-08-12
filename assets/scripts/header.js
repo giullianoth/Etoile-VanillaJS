@@ -13,17 +13,19 @@ export const SetFixedHeader = () => window.scrollY > 0
 
 // MOBILE MENU
 export const MobileMenu = () => {
-    menuIcon?.addEventListener("click", () => {
-        menuNavigationContext.classList.toggle("open-menu")
-        menuIcon.innerHTML = menuNavigationContext.classList.contains("open-menu") ? closeIcon : hamburgerIcon
-    })
+    if (menuOverlay && menuIcon) {
+        menuIcon?.addEventListener("click", () => {
+            menuNavigationContext.classList.toggle("open-menu")
+            menuIcon.innerHTML = menuNavigationContext.classList.contains("open-menu") ? closeIcon : hamburgerIcon
+        })
 
-    menuOverlay.addEventListener("click", event => {
-        if (event.target.classList.contains("j_menu_overlay")) {
-            menuNavigationContext.classList.remove("open-menu")
-            menuIcon.innerHTML = hamburgerIcon
-        }
-    })
+        menuOverlay.addEventListener("click", event => {
+            if (event.target.classList.contains("j_menu_overlay")) {
+                menuNavigationContext.classList.remove("open-menu")
+                menuIcon.innerHTML = hamburgerIcon
+            }
+        })
+    }
 }
 
 // SCROLL UP

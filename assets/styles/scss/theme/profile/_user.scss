@@ -41,5 +41,26 @@
         &__name {
             margin-bottom: 10px;
         }
+
+        &__email {
+            @include flex;
+            @include column;
+            gap: 20px;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include row;
+                justify-content: flex-start;
+            }
+        }
+
+        &__edit {
+            font-family: $font-cormorant-garamond;
+            font-weight: 600;
+
+            &:hover {
+                color: $color-white-smoke !important;
+                background-color: $color-murrey !important;
+            }
+        }
     }
 }

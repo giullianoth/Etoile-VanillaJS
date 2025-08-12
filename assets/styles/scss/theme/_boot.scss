@@ -116,6 +116,11 @@ i.ph {
         &.outline {
             background-color: transparent;
         }
+
+        &.small {
+            padding: 6px;
+            font-size: 0.8em
+        }
     }
 
     &scroll-up {
