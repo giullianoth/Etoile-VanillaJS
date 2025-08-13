@@ -119,6 +119,9 @@ input[type=radio]:checked {
 input[type=radio]::after {
   content: "\e18a";
 }
+input[type=file] {
+  display: none;
+}
 
 button {
   font-family: inherit;
@@ -1494,16 +1497,44 @@ i.ph {
 }
 .etl-profile-user__photo {
   flex-basis: 120px;
+  border: 3px solid #6F0231;
+  overflow: hidden;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.etl-profile-user__photo:hover .etl-profile-user__photo-change {
+  visibility: visible;
+  opacity: 1;
 }
 .etl-profile-user__photo img {
   width: 120px;
   height: 120px;
   object-fit: cover;
   object-position: center;
-  border: 3px solid #6F0231;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
+}
+.etl-profile-user__photo-change {
+  position: absolute;
+  top: unset;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: all 0.3s ease 0s;
+  font-size: 1.6em;
+  color: #F6F4F5;
+  bottom: 0;
+  height: 50%;
+  background-image: linear-gradient(rgba(19, 16, 17, 0), #131011);
+  visibility: hidden;
+  opacity: 0;
 }
 .etl-profile-user__info {
   flex-basis: 100%;

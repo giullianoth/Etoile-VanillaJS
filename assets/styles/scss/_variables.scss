@@ -27,6 +27,7 @@ $color-error-text: #790707;
 $color-night-overlay: rgba($color: $color-night, $alpha: 0.6);
 $color-old-gold-overlay: rgba($color: $color-old-gold, $alpha: 0.5);
 $color-night-gradient: linear-gradient($color-night, rgba($color: $color-night, $alpha: 0));
+$color-night-gradient-2: linear-gradient(rgba($color: $color-night, $alpha: 0), $color-night);
 $color-murrey-subtle-shadow: rgba($color: $color-murrey, $alpha: 0.1);
 
 // TYPOGRAPHY

@@ -16,14 +16,37 @@
 
         &__photo {
             @include flexBasis(120px);
+            border: 3px solid $color-claret;
+            overflow: hidden;
+            @include rounded;
+            @include flex;
+            @include relative;
+
+            &:hover {
+                .etl-profile-user__photo-change {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
 
             img {
                 width: 120px;
                 height: 120px;
                 object-fit: cover;
                 object-position: center;
-                border: 3px solid $color-claret;
-                @include rounded;
+            }
+
+            &-change {
+                @include absoluteFull(unset);
+                @include flex;
+                @include transition;
+                font-size: 1.6em;
+                color: $color-white-smoke;
+                bottom: 0;
+                height: 50%;
+                background-image: $color-night-gradient-2;
+                visibility: hidden;
+                opacity: 0;
             }
         }
 

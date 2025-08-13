@@ -116,6 +116,10 @@ input {
             content: "\e18a";
         }
     }
+
+    &[type="file"] {
+        display: none;
+    }
 }
 
 button {
