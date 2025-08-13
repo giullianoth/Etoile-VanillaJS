@@ -5,13 +5,15 @@ const collapseWrapper = document.querySelector(".j_profile_form_collapse")
 const wrapperIsVisible = () => window.getComputedStyle(collapseWrapper).display !== "none"
 
 const ProfileForm = () => {
-    trigger.addEventListener("input", () => {
-        if (wrapperIsVisible() && !trigger.checked) {
-            slideUp(collapseWrapper)
-        } else {
-            slideDown(collapseWrapper, "flex")
-        }
-    })
+    if (trigger && collapseWrapper) {
+        trigger.addEventListener("input", () => {
+            if (wrapperIsVisible() && !trigger.checked) {
+                slideUp(collapseWrapper)
+            } else {
+                slideDown(collapseWrapper, "flex")
+            }
+        })
+    }
 }
 
 export default ProfileForm
