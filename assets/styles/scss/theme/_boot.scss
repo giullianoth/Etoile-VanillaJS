@@ -49,6 +49,10 @@ img {
     max-width: 100%;
 }
 
+label {
+    cursor: pointer;
+}
+
 input {
     padding: 12px;
     background: none;
@@ -57,6 +61,61 @@ input {
     font-size: inherit;
     font-weight: inherit;
     outline: none;
+
+    &[type="checkbox"], &[type="radio"] {
+        @include setBrowserPrefix(appearance, none, "webkit");
+        @include transition;
+        @include relative;
+        vertical-align: middle;
+        accent-color: $color-murrey;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        cursor: pointer;
+        font-size: 0.8em;
+        color: $color-white-smoke;
+        border-color: $color-murrey;
+
+        &:checked {
+            &::after {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        &::after {
+            @include absolute(50%, 50%);
+            transform: translate(-50%, -50%);
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+
+    &[type="checkbox"] {
+        font-family: "Phosphor" !important;
+
+        &:checked {            
+            background-color: $color-murrey;
+        }
+
+        &::after {
+            content: "\e182";
+        }
+    }
+
+    &[type="radio"] {
+        @include rounded;
+        font-family: "Phosphor-Fill" !important;
+
+        &:checked {
+            background-color: transparent;
+            color: $color-murrey;
+        }
+
+        &::after {
+            content: "\e18a";
+        }
+    }
 }
 
 button {

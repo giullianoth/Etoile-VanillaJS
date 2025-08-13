@@ -1,0 +1,40 @@
+@include profileTheme() {
+    &edit {
+        background-color: $color-white-smoke;
+        padding: 20px;
+
+        @include setResponsiveDesign($breakpoint-medium) {
+            padding: 30px;
+        }
+
+        &__title {
+            margin-bottom: 20px;
+        }
+
+        &__form, &__password {
+            @include flex(flex-start, stretch, nowrap);
+            @include column;
+            gap: 20px;
+        }
+
+        &__check {
+            @include flex(flex-start, center, nowrap);
+            column-gap: 10px;
+        }
+
+        &__password {
+            display: none;
+        }
+
+        &__submit {
+            @include flex(flex-start, stretch, nowrap);
+            @include column;
+            gap: 20px;
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                @include row;
+                justify-content: flex-end;
+            }
+        }
+    }
+}

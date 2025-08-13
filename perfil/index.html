@@ -59,7 +59,7 @@
                     <p class="etl-profile-user__email">
                         giulliano@email.com
 
-                        <button class="etl-button primary outline small etl-profile-user__edit">
+                        <button class="etl-button primary outline small etl-profile-user__edit j_modal_clickable" data-target="modal-edit-profile">
                             <i class="ph ph-note-pencil"></i>
                             Editar perfil / Alterar senha
                         </button>
@@ -132,7 +132,7 @@
 
                             <button class="etl-trigger error">
                                 <i class="ph ph-trash"></i>
-                                Excluir
+                                Cancelar
                             </button>
                         </div>
                     </section>
@@ -168,8 +168,8 @@
 
                         <div class="etl-profile-orders__order-actions">
                             <button class="etl-trigger info">
-                                <i class="ph ph-note-pencil"></i>
-                                Editar
+                                <i class="ph ph-arrow-clockwise"></i>
+                                Pedir de novo
                             </button>
 
                             <button class="etl-trigger error">
@@ -210,8 +210,8 @@
 
                         <div class="etl-profile-orders__order-actions">
                             <button class="etl-trigger info">
-                                <i class="ph ph-note-pencil"></i>
-                                Editar
+                                <i class="ph ph-arrow-clockwise"></i>
+                                Pedir de novo
                             </button>
 
                             <button class="etl-trigger error">
@@ -220,6 +220,36 @@
                             </button>
                         </div>
                     </section>
+                </div>
+            </div>
+        </section>
+
+        <section class="etl-modal j_modal" id="modal-edit-profile">
+            <div class="etl-modal__wrapper">
+                <div class="etl-profile-edit">
+                    <header class="etl-profile-edit__title">
+                        <h2>Atualize seus dados</h2>
+                    </header>
+
+                    <form class="etl-profile-edit__form">
+                        <input type="text" placeholder="Nome" value="Giulliano Guimarães" required>
+
+                        <div class="etl-profile-edit__check j_profile_form_clickable">
+                            <input type="checkbox" id="profile-reset-password">
+                            <label for="profile-reset-password">Redefinir a senha</label>
+                        </div>
+
+                        <div class="etl-profile-edit__password j_profile_form_collapse">
+                            <input type="password" placeholder="Senha atual">
+                            <input type="password" placeholder="Nova senha">
+                            <input type="password" placeholder="Confirmar nova senha">
+                        </div>
+
+                        <div class="etl-profile-edit__submit">
+                            <span class="etl-button primary outline j_modal_close" data-target="modal-edit-profile">Cancelar</span>
+                            <button class="etl-button primary">Atualizar</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
