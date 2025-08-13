@@ -22,7 +22,7 @@
 
             <nav class="etl-header__navigation j_menu_navigation_context">
                 <div class="etl-header__navigation-logout">
-                    <a href="#" title="Sair">
+                    <a href="/" title="Sair">
                         <i class="ph ph-sign-out"></i>
                     </a>
                 </div>
@@ -125,12 +125,12 @@
                         </article>
 
                         <div class="etl-profile-orders__order-actions">
-                            <button class="etl-trigger info">
+                            <button class="etl-trigger info j_modal_clickable" data-target="modal-edit-order">
                                 <i class="ph ph-note-pencil"></i>
                                 Editar
                             </button>
 
-                            <button class="etl-trigger error">
+                            <button class="etl-trigger error j_modal_clickable" data-target="modal-cancel-order">
                                 <i class="ph ph-trash"></i>
                                 Cancelar
                             </button>
@@ -172,7 +172,7 @@
                                 Pedir de novo
                             </button>
 
-                            <button class="etl-trigger error">
+                            <button class="etl-trigger error j_modal_clickable" data-target="modal-delete-order">
                                 <i class="ph ph-trash"></i>
                                 Excluir
                             </button>
@@ -214,7 +214,7 @@
                                 Pedir de novo
                             </button>
 
-                            <button class="etl-trigger error">
+                            <button class="etl-trigger error j_modal_clickable" data-target="modal-delete-order">
                                 <i class="ph ph-trash"></i>
                                 Excluir
                             </button>
@@ -250,6 +250,134 @@
                             <button class="etl-button primary">Atualizar</button>
                         </div>
                     </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="etl-modal j_modal" id="modal-edit-order">
+            <div class="etl-modal__wrapper">
+                <div class="etl-profile-edit">
+                    <header class="etl-profile-edit__title">
+                        <h2>Editar pedido</h2>
+                    </header>
+
+                    <div class="etl-profile-edit__orders">
+                        <div class="etl-profile-orders__order-item">
+                            <div class="etl-profile-orders__order-image">
+                                <img src="/assets/images/presentation-image-1.jpg" alt="Shrimp and Vegetable Salad">
+                            </div>
+
+                            <div class="etl-profile-orders__order-info">
+                                <header class="etl-profile-orders__order-name">
+                                    <h3>Shrimp and Vegetable Salad</h3>
+                                </header>
+
+                                <p class="etl-profile-orders__order-portions">
+                                    <strong>Porções:</strong> 2
+                                </p>
+                            </div>
+
+                            <div class="etl-profile-edit__order-action j_modal_clickable" data-target="modal-cancel-item" title="Cancelar este item">
+                                <i class="ph ph-trash"></i>
+                            </div>
+                        </div>
+
+                        <div class="etl-profile-orders__order-item">
+                            <div class="etl-profile-orders__order-image">
+                                <img src="/assets/images/presentation-image-1.jpg" alt="Shrimp and Vegetable Salad">
+                            </div>
+
+                            <div class="etl-profile-orders__order-info">
+                                <header class="etl-profile-orders__order-name">
+                                    <h3>Shrimp and Vegetable Salad</h3>
+                                </header>
+
+                                <p class="etl-profile-orders__order-portions">
+                                    <strong>Porções:</strong> 2
+                                </p>
+                            </div>
+
+                            <div class="etl-profile-edit__order-action j_modal_clickable" data-target="modal-cancel-item" title="Cancelar este item">
+                                <i class="ph ph-trash"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="etl-profile-edit__form">
+                        <div class="etl-profile-edit__form-order">
+                            <input type="time" class="time" value="12:30">
+
+                            <p><strong>Atenção:</strong> Não é possível selecionar horário anterior ao já selecionado.</p>
+                        </div>
+
+                        <div class="etl-profile-edit__check">
+                            <input type="checkbox" id="order-confirm-receipt">
+                            <label for="order-confirm-receipt">Recebi meu pedido</label>
+                        </div>
+
+                        <div class="etl-profile-edit__submit etl-profile-edit__order-submit">
+                            <div>
+                                <span class="etl-button primary outline j_modal_close" data-target="modal-edit-order">Cancelar</span>
+                                <button class="etl-button primary">Atualizar</button>
+                            </div>
+                            
+                            <p>
+                                <span class="etl-button primary clear etl-profile-edit__order-cancel j_modal_clickable" data-target="modal-cancel-order">
+                                    <i class="ph ph-trash"></i>
+                                    Cancelar pedido
+                                </span>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="etl-modal j_modal" id="modal-delete-order">
+            <div class="etl-modal__wrapper">
+                <div class="etl-profile-edit">
+                    <header class="etl-profile-edit__title">
+                        <h2>Excluir pedido?</h2>
+                    </header>
+
+                    <div class="etl-profile-edit__actions">
+                        <button class="etl-button primary outline j_modal_close" data-target="modal-delete-order">Não</button>
+                        <button class="etl-button primary j_modal_close" data-target="modal-delete-order">Sim</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="etl-modal j_modal" id="modal-cancel-order">
+            <div class="etl-modal__wrapper">
+                <div class="etl-profile-edit">
+                    <header class="etl-profile-edit__title">
+                        <h2>Cancelar pedido?</h2>
+                    </header>
+
+                    <p>Seu pedido de cancelamento será analisado, e caso aprovado, o reembolso ocorrerá em até 1 dia. Você receberá informações a respeito.</p>
+
+                    <div class="etl-profile-edit__actions">
+                        <button class="etl-button primary outline j_modal_close" data-target="modal-cancel-order">Não</button>
+                        <button class="etl-button primary j_modal_close" data-target="modal-cancel-order">Sim</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="etl-modal j_modal" id="modal-cancel-item">
+            <div class="etl-modal__wrapper">
+                <div class="etl-profile-edit">
+                    <header class="etl-profile-edit__title">
+                        <h2>Cancelar item do pedido?</h2>
+                    </header>
+
+                    <p>Seu pedido de cancelamento será analisado, e caso aprovado, o reembolso ocorrerá em até 1 dia. Você receberá informações a respeito.</p>
+
+                    <div class="etl-profile-edit__actions">
+                        <button class="etl-button primary outline j_modal_close" data-target="modal-cancel-item">Não</button>
+                        <button class="etl-button primary j_modal_close" data-target="modal-cancel-item">Sim</button>
+                    </div>
                 </div>
             </div>
         </section>

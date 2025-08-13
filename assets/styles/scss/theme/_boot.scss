@@ -157,7 +157,7 @@ i.ph {
             background-color: $color-murrey;
             border-color: $color-murrey;
             
-            &:hover, &.outline {
+            &:hover, &.outline, &.clear {
                 color: $color-murrey;
             }
         }
@@ -179,6 +179,12 @@ i.ph {
         &.small {
             padding: 6px;
             font-size: 0.8em
+        }
+
+        &.clear {
+            padding: 0;
+            background: none;
+            border: none;
         }
     }
 

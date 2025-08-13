@@ -9,12 +9,36 @@
 
         &__title {
             margin-bottom: 20px;
+            text-align: center;
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                text-align: left;
+            }
         }
 
         &__form, &__password {
             @include flex(flex-start, stretch, nowrap);
             @include column;
             gap: 20px;
+        }
+
+        &__form {
+            &-order {
+                @include flex(center, stretch, nowrap);
+                @include column;
+                gap: 20px;
+
+                @include setResponsiveDesign($breakpoint-medium) {
+                    @include row;
+                    justify-content: flex-start;
+                }
+
+                p {
+                    strong {
+                        color: $color-murrey
+                    }
+                }
+            }
         }
 
         &__check {
@@ -34,6 +58,59 @@
             @include setResponsiveDesign($breakpoint-medium) {
                 @include row;
                 justify-content: flex-end;
+            }
+        }
+
+        &__orders {
+            margin-bottom: 40px;
+        }
+
+        &__order {
+            &-action {
+                color: $color-murrey;
+                cursor: pointer;
+            }
+
+            &-submit {
+                margin-top: 40px;
+
+                @include setResponsiveDesign($breakpoint-medium) {
+                    justify-content: space-between;
+                    align-items: center;
+                    @include rowReverse;
+                }
+
+                div {
+                    @include flex(center, stretch, nowrap);
+                    @include column;
+                    gap: 20px;
+
+                    @include setResponsiveDesign($breakpoint-medium) {
+                        @include row;
+                    }
+                }
+
+                p {
+                    text-align: center;
+                }
+
+                .etl-button {
+                    @include setResponsiveDesign($breakpoint-medium) {
+                        font-size: 0.8em;
+                        gap: 6px;
+                    }
+                }
+            }
+        }
+
+        &__actions {
+            @include flex(center, stretch, nowrap);
+            @include column;
+            gap: 20px;
+            margin-top: 20px;
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                @include row;
             }
         }
     }
